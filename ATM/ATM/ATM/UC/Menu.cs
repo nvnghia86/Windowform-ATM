@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ATM
+namespace ATM.UC
 {
-    public partial class DangThucHien : UserControl
+    public partial class Menu : UserControl
     {
-        public DangThucHien()
+        public Menu()
         {
             InitializeComponent();
         }
