@@ -12,6 +12,18 @@ namespace ATM.UC.UC6
 {
     public partial class ChangePINFail : UserControl
     {
+        private static ChangePINFail _instance;
+        public static ChangePINFail Instance
+        {
+            get
+            {
+                if (_instance == null)
+                {
+                    _instance = new ChangePINFail();
+                }
+                return _instance;
+            }
+        }
         public ChangePINFail()
         {
             InitializeComponent();

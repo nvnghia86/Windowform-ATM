@@ -121,6 +121,9 @@
   <data name="BienLai" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\BienLai.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="btnArrow" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\btnArrow.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="CamOn" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\CamOn.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -142,9 +145,6 @@
   <data name="GiaoDichKhac" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\GiaoDichKhac.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="theatm" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\theatm.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Background" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Background.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -154,6 +154,9 @@
   <data name="CANCEL" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\CANCEL.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="tay1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tay1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="DongY" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\DongY.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -162,6 +165,9 @@
   </data>
   <data name="Khong" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Khong.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BienLai1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BienLai1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="2tr" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\2tr.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -181,8 +187,8 @@
   <data name="anhnen" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\anhnen.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="btnArrow" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\btnArrow.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="theatm" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\theatm.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="demo2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\demo2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -202,8 +208,8 @@
   <data name="demo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\demo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="BienLai1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\BienLai1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="hello1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\hello1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="InSaoKe" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\InSaoKe.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -226,7 +232,7 @@
   <data name="1tr" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\1tr.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="hello1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\hello1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="hello2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\hello2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

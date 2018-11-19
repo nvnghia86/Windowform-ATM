@@ -353,6 +353,16 @@ namespace ATM.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap hello2 {
+            get {
+                object obj = ResourceManager.GetObject("hello2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap InSaoKe {
             get {
                 object obj = ResourceManager.GetObject("InSaoKe", resourceCulture);
@@ -396,6 +406,16 @@ namespace ATM.Properties {
         internal static System.Drawing.Bitmap tay {
             get {
                 object obj = ResourceManager.GetObject("tay", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap tay1 {
+            get {
+                object obj = ResourceManager.GetObject("tay1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

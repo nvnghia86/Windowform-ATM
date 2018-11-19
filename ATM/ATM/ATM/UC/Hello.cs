@@ -12,6 +12,18 @@ namespace ATM.UC
 {
     public partial class Hello : UserControl
     {
+        private static Hello _instance;
+        public static Hello Instance
+        {
+            get
+            {
+                if (_instance == null)
+                {
+                    _instance = new Hello();
+                }
+                return _instance;
+            }
+        }
         public Hello()
         {
             InitializeComponent();

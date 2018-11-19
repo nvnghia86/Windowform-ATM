@@ -8,25 +8,30 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ATM.UC.UC6
+namespace ATM.UC
 {
-    public partial class ChangePINSuccess : UserControl
+    public partial class ListMenu : UserControl
     {
-        private static ChangePINSuccess _instance;
-        public static ChangePINSuccess Instance
+        private static ListMenu _instance;
+        public static ListMenu Instance
         {
             get
             {
                 if (_instance == null)
                 {
-                    _instance = new ChangePINSuccess();
+                    _instance = new ListMenu();
                 }
                 return _instance;
             }
         }
-        public ChangePINSuccess()
+        public ListMenu()
         {
             InitializeComponent();
+            formMain.state = "menu";
+        }
+        public void setNameHello(string name)
+        {
+            lblHello.Text = name;
         }
     }
 }

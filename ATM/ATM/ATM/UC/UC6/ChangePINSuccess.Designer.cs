@@ -28,19 +28,36 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.label4 = new System.Windows.Forms.Label();
             this.SuspendLayout();
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label4.Location = new System.Drawing.Point(117, 166);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(336, 29);
+            this.label4.TabIndex = 5;
+            this.label4.Text = "Bạn đã đổi mã PIN thành công";
             // 
             // ChangePINSuccess
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::ATM.Properties.Resources.Background;
+            this.Controls.Add(this.label4);
             this.Name = "ChangePINSuccess";
             this.Size = new System.Drawing.Size(570, 360);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
+
+        private System.Windows.Forms.Label label4;
     }
 }

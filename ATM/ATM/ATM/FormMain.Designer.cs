@@ -30,23 +30,11 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(formMain));
             this.panelMain = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.btnThe = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.lbCardNo = new System.Windows.Forms.Label();
-            this.btnCancel = new System.Windows.Forms.Button();
-            this.btnClear = new System.Windows.Forms.Button();
-            this.btnRight1 = new System.Windows.Forms.Button();
-            this.btnRight2 = new System.Windows.Forms.Button();
-            this.btnLeft1 = new System.Windows.Forms.Button();
-            this.btnRight3 = new System.Windows.Forms.Button();
-            this.btnLeft2 = new System.Windows.Forms.Button();
-            this.btnRight4 = new System.Windows.Forms.Button();
-            this.btnLeft3 = new System.Windows.Forms.Button();
-            this.btnLeft4 = new System.Windows.Forms.Button();
-            this.btnEnter = new System.Windows.Forms.Button();
             this.btn0 = new System.Windows.Forms.Button();
             this.btn9 = new System.Windows.Forms.Button();
             this.btn8 = new System.Windows.Forms.Button();
@@ -59,6 +47,18 @@
             this.btn3 = new System.Windows.Forms.Button();
             this.btn2 = new System.Windows.Forms.Button();
             this.btn1 = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.btnCancel = new System.Windows.Forms.Button();
+            this.btnClear = new System.Windows.Forms.Button();
+            this.btnRight1 = new System.Windows.Forms.Button();
+            this.btnRight2 = new System.Windows.Forms.Button();
+            this.btnLeft1 = new System.Windows.Forms.Button();
+            this.btnRight3 = new System.Windows.Forms.Button();
+            this.btnLeft2 = new System.Windows.Forms.Button();
+            this.btnRight4 = new System.Windows.Forms.Button();
+            this.btnLeft3 = new System.Windows.Forms.Button();
+            this.btnLeft4 = new System.Windows.Forms.Button();
+            this.btnEnter = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // panelMain
@@ -68,14 +68,6 @@
             this.panelMain.Name = "panelMain";
             this.panelMain.Size = new System.Drawing.Size(570, 360);
             this.panelMain.TabIndex = 9;
-            // 
-            // panel1
-            // 
-            this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
-            this.panel1.Location = new System.Drawing.Point(749, 391);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(149, 222);
-            this.panel1.TabIndex = 38;
             // 
             // btnThe
             // 
@@ -125,127 +117,6 @@
             this.lbCardNo.Size = new System.Drawing.Size(100, 43);
             this.lbCardNo.TabIndex = 33;
             this.lbCardNo.Visible = false;
-            // 
-            // btnCancel
-            // 
-            this.btnCancel.BackgroundImage = global::ATM.Properties.Resources.CANCEL;
-            this.btnCancel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnCancel.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnCancel.Location = new System.Drawing.Point(562, 480);
-            this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(100, 44);
-            this.btnCancel.TabIndex = 30;
-            this.btnCancel.UseVisualStyleBackColor = true;
-            // 
-            // btnClear
-            // 
-            this.btnClear.BackgroundImage = global::ATM.Properties.Resources.CLEAR;
-            this.btnClear.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnClear.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnClear.Location = new System.Drawing.Point(562, 430);
-            this.btnClear.Name = "btnClear";
-            this.btnClear.Size = new System.Drawing.Size(100, 44);
-            this.btnClear.TabIndex = 29;
-            this.btnClear.UseVisualStyleBackColor = true;
-            // 
-            // btnRight1
-            // 
-            this.btnRight1.BackgroundImage = global::ATM.Properties.Resources.btnArrowRight;
-            this.btnRight1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnRight1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnRight1.Location = new System.Drawing.Point(840, 174);
-            this.btnRight1.Name = "btnRight1";
-            this.btnRight1.Size = new System.Drawing.Size(87, 38);
-            this.btnRight1.TabIndex = 28;
-            this.btnRight1.UseVisualStyleBackColor = true;
-            // 
-            // btnRight2
-            // 
-            this.btnRight2.BackgroundImage = global::ATM.Properties.Resources.btnArrowRight;
-            this.btnRight2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnRight2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnRight2.Location = new System.Drawing.Point(840, 221);
-            this.btnRight2.Name = "btnRight2";
-            this.btnRight2.Size = new System.Drawing.Size(87, 38);
-            this.btnRight2.TabIndex = 27;
-            this.btnRight2.UseVisualStyleBackColor = true;
-            // 
-            // btnLeft1
-            // 
-            this.btnLeft1.BackgroundImage = global::ATM.Properties.Resources.btnArrow;
-            this.btnLeft1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnLeft1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnLeft1.Location = new System.Drawing.Point(110, 174);
-            this.btnLeft1.Name = "btnLeft1";
-            this.btnLeft1.Size = new System.Drawing.Size(87, 38);
-            this.btnLeft1.TabIndex = 26;
-            this.btnLeft1.UseVisualStyleBackColor = true;
-            // 
-            // btnRight3
-            // 
-            this.btnRight3.BackgroundImage = global::ATM.Properties.Resources.btnArrowRight;
-            this.btnRight3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnRight3.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnRight3.Location = new System.Drawing.Point(840, 269);
-            this.btnRight3.Name = "btnRight3";
-            this.btnRight3.Size = new System.Drawing.Size(87, 38);
-            this.btnRight3.TabIndex = 25;
-            this.btnRight3.UseVisualStyleBackColor = true;
-            // 
-            // btnLeft2
-            // 
-            this.btnLeft2.BackgroundImage = global::ATM.Properties.Resources.btnArrow;
-            this.btnLeft2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnLeft2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnLeft2.Location = new System.Drawing.Point(110, 221);
-            this.btnLeft2.Name = "btnLeft2";
-            this.btnLeft2.Size = new System.Drawing.Size(87, 38);
-            this.btnLeft2.TabIndex = 24;
-            this.btnLeft2.UseVisualStyleBackColor = true;
-            // 
-            // btnRight4
-            // 
-            this.btnRight4.BackgroundImage = global::ATM.Properties.Resources.btnArrowRight;
-            this.btnRight4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnRight4.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnRight4.Location = new System.Drawing.Point(840, 324);
-            this.btnRight4.Name = "btnRight4";
-            this.btnRight4.Size = new System.Drawing.Size(87, 38);
-            this.btnRight4.TabIndex = 23;
-            this.btnRight4.UseVisualStyleBackColor = true;
-            // 
-            // btnLeft3
-            // 
-            this.btnLeft3.BackgroundImage = global::ATM.Properties.Resources.btnArrow;
-            this.btnLeft3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnLeft3.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnLeft3.Location = new System.Drawing.Point(110, 269);
-            this.btnLeft3.Name = "btnLeft3";
-            this.btnLeft3.Size = new System.Drawing.Size(87, 38);
-            this.btnLeft3.TabIndex = 22;
-            this.btnLeft3.UseVisualStyleBackColor = true;
-            // 
-            // btnLeft4
-            // 
-            this.btnLeft4.BackgroundImage = global::ATM.Properties.Resources.btnArrow;
-            this.btnLeft4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnLeft4.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnLeft4.Location = new System.Drawing.Point(110, 324);
-            this.btnLeft4.Name = "btnLeft4";
-            this.btnLeft4.Size = new System.Drawing.Size(87, 38);
-            this.btnLeft4.TabIndex = 21;
-            this.btnLeft4.UseVisualStyleBackColor = true;
-            // 
-            // btnEnter
-            // 
-            this.btnEnter.BackgroundImage = global::ATM.Properties.Resources.Enter1;
-            this.btnEnter.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnEnter.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnEnter.Location = new System.Drawing.Point(562, 380);
-            this.btnEnter.Name = "btnEnter";
-            this.btnEnter.Size = new System.Drawing.Size(100, 44);
-            this.btnEnter.TabIndex = 20;
-            this.btnEnter.UseVisualStyleBackColor = true;
             // 
             // btn0
             // 
@@ -378,6 +249,138 @@
             this.btn1.TabIndex = 32;
             this.btn1.Text = "1";
             this.btn1.UseVisualStyleBackColor = true;
+            // 
+            // panel1
+            // 
+            this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
+            this.panel1.Location = new System.Drawing.Point(746, 391);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(149, 222);
+            this.panel1.TabIndex = 38;
+            // 
+            // btnCancel
+            // 
+            this.btnCancel.BackgroundImage = global::ATM.Properties.Resources.CANCEL;
+            this.btnCancel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnCancel.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.btnCancel.Location = new System.Drawing.Point(562, 480);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(100, 44);
+            this.btnCancel.TabIndex = 30;
+            this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            // 
+            // btnClear
+            // 
+            this.btnClear.BackgroundImage = global::ATM.Properties.Resources.CLEAR;
+            this.btnClear.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnClear.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.btnClear.Location = new System.Drawing.Point(562, 430);
+            this.btnClear.Name = "btnClear";
+            this.btnClear.Size = new System.Drawing.Size(100, 44);
+            this.btnClear.TabIndex = 29;
+            this.btnClear.UseVisualStyleBackColor = true;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
+            // 
+            // btnRight1
+            // 
+            this.btnRight1.BackgroundImage = global::ATM.Properties.Resources.btnArrowRight;
+            this.btnRight1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnRight1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.btnRight1.Location = new System.Drawing.Point(840, 174);
+            this.btnRight1.Name = "btnRight1";
+            this.btnRight1.Size = new System.Drawing.Size(87, 38);
+            this.btnRight1.TabIndex = 28;
+            this.btnRight1.UseVisualStyleBackColor = true;
+            // 
+            // btnRight2
+            // 
+            this.btnRight2.BackgroundImage = global::ATM.Properties.Resources.btnArrowRight;
+            this.btnRight2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnRight2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.btnRight2.Location = new System.Drawing.Point(840, 221);
+            this.btnRight2.Name = "btnRight2";
+            this.btnRight2.Size = new System.Drawing.Size(87, 38);
+            this.btnRight2.TabIndex = 27;
+            this.btnRight2.UseVisualStyleBackColor = true;
+            // 
+            // btnLeft1
+            // 
+            this.btnLeft1.BackgroundImage = global::ATM.Properties.Resources.btnArrow;
+            this.btnLeft1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnLeft1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.btnLeft1.Location = new System.Drawing.Point(110, 174);
+            this.btnLeft1.Name = "btnLeft1";
+            this.btnLeft1.Size = new System.Drawing.Size(87, 38);
+            this.btnLeft1.TabIndex = 26;
+            this.btnLeft1.UseVisualStyleBackColor = true;
+            // 
+            // btnRight3
+            // 
+            this.btnRight3.BackgroundImage = global::ATM.Properties.Resources.btnArrowRight;
+            this.btnRight3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnRight3.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.btnRight3.Location = new System.Drawing.Point(840, 269);
+            this.btnRight3.Name = "btnRight3";
+            this.btnRight3.Size = new System.Drawing.Size(87, 38);
+            this.btnRight3.TabIndex = 25;
+            this.btnRight3.UseVisualStyleBackColor = true;
+            // 
+            // btnLeft2
+            // 
+            this.btnLeft2.BackgroundImage = global::ATM.Properties.Resources.btnArrow;
+            this.btnLeft2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnLeft2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.btnLeft2.Location = new System.Drawing.Point(110, 221);
+            this.btnLeft2.Name = "btnLeft2";
+            this.btnLeft2.Size = new System.Drawing.Size(87, 38);
+            this.btnLeft2.TabIndex = 24;
+            this.btnLeft2.UseVisualStyleBackColor = true;
+            // 
+            // btnRight4
+            // 
+            this.btnRight4.BackgroundImage = global::ATM.Properties.Resources.btnArrowRight;
+            this.btnRight4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnRight4.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.btnRight4.Location = new System.Drawing.Point(840, 324);
+            this.btnRight4.Name = "btnRight4";
+            this.btnRight4.Size = new System.Drawing.Size(87, 38);
+            this.btnRight4.TabIndex = 23;
+            this.btnRight4.UseVisualStyleBackColor = true;
+            // 
+            // btnLeft3
+            // 
+            this.btnLeft3.BackgroundImage = global::ATM.Properties.Resources.btnArrow;
+            this.btnLeft3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnLeft3.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.btnLeft3.Location = new System.Drawing.Point(110, 269);
+            this.btnLeft3.Name = "btnLeft3";
+            this.btnLeft3.Size = new System.Drawing.Size(87, 38);
+            this.btnLeft3.TabIndex = 22;
+            this.btnLeft3.UseVisualStyleBackColor = true;
+            // 
+            // btnLeft4
+            // 
+            this.btnLeft4.BackgroundImage = global::ATM.Properties.Resources.btnArrow;
+            this.btnLeft4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnLeft4.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.btnLeft4.Location = new System.Drawing.Point(110, 324);
+            this.btnLeft4.Name = "btnLeft4";
+            this.btnLeft4.Size = new System.Drawing.Size(87, 38);
+            this.btnLeft4.TabIndex = 21;
+            this.btnLeft4.UseVisualStyleBackColor = true;
+            // 
+            // btnEnter
+            // 
+            this.btnEnter.BackgroundImage = global::ATM.Properties.Resources.Enter1;
+            this.btnEnter.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnEnter.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.btnEnter.Location = new System.Drawing.Point(562, 380);
+            this.btnEnter.Name = "btnEnter";
+            this.btnEnter.Size = new System.Drawing.Size(100, 44);
+            this.btnEnter.TabIndex = 20;
+            this.btnEnter.UseVisualStyleBackColor = true;
+            this.btnEnter.Click += new System.EventHandler(this.btnEnter_Click);
             // 
             // formMain
             // 

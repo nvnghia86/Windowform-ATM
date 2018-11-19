@@ -61,6 +61,54 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UC\Hello.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC\Hello.Designer.cs">
+      <DependentUpon>Hello.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC\ListMenu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC\ListMenu.Designer.cs">
+      <DependentUpon>ListMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC\UC1\ValidateCard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC\UC1\ValidateCard.Designer.cs">
+      <DependentUpon>ValidateCard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC\UC1\ValidatePin.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC\UC1\ValidatePin.Designer.cs">
+      <DependentUpon>ValidatePin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC\UC6\ChangePINFail.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC\UC6\ChangePINFail.Designer.cs">
+      <DependentUpon>ChangePINFail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC\UC6\ChangePINSuccess.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC\UC6\ChangePINSuccess.Designer.cs">
+      <DependentUpon>ChangePINSuccess.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC\UC6\NewPIN.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC\UC6\NewPIN.Designer.cs">
+      <DependentUpon>NewPIN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC\UC6\OldPIN.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC\UC6\OldPIN.Designer.cs">
+      <DependentUpon>OldPIN.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="FormMain.resx">
       <DependentUpon>FormMain.cs</DependentUpon>
     </EmbeddedResource>
@@ -77,6 +125,30 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="UC\Hello.resx">
+      <DependentUpon>Hello.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC\ListMenu.resx">
+      <DependentUpon>ListMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC\UC1\ValidateCard.resx">
+      <DependentUpon>ValidateCard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC\UC1\ValidatePin.resx">
+      <DependentUpon>ValidatePin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC\UC6\ChangePINFail.resx">
+      <DependentUpon>ChangePINFail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC\UC6\ChangePINSuccess.resx">
+      <DependentUpon>ChangePINSuccess.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC\UC6\NewPIN.resx">
+      <DependentUpon>NewPIN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC\UC6\OldPIN.resx">
+      <DependentUpon>OldPIN.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -211,6 +283,15 @@
       <Project>{0d8f777a-53eb-4fd1-89f1-40d1ea5fde5c}</Project>
       <Name>DTO</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hello1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tay1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hello2.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

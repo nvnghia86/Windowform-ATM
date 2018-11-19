@@ -34,7 +34,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::ATM.Properties.Resources.hello1;
+            this.BackgroundImage = global::ATM.Properties.Resources.hello2;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Name = "Hello";
             this.Size = new System.Drawing.Size(570, 360);
