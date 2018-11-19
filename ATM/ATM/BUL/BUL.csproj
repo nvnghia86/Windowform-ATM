@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{8C20076D-7630-40EF-9C0E-0CB5664BE330}</ProjectGuid>
+    <ProjectGuid>{4A87DF04-40EF-45C3-A205-D472254EFE9D}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>DAL</RootNamespace>
-    <AssemblyName>DAL</AssemblyName>
+    <RootNamespace>BUL</RootNamespace>
+    <AssemblyName>BUL</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -41,18 +41,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AccountDAL.cs" />
-    <Compile Include="CardDAL.cs" />
-    <Compile Include="ConfigDAL.cs" />
-    <Compile Include="ConnectDatabase.cs" />
-    <Compile Include="CustomerDAL.cs" />
-    <Compile Include="LogDAL.cs" />
+    <Compile Include="AccountBUL.cs" />
+    <Compile Include="CardBUL.cs" />
+    <Compile Include="ConfigBUL.cs" />
+    <Compile Include="CustomerBUL.cs" />
+    <Compile Include="LogBUL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="StockDAL.cs" />
+    <Compile Include="StockBUL.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\DAL\DAL.csproj">
+      <Project>{bf151f36-7979-44e5-850c-10b297b777ec}</Project>
+      <Name>DAL</Name>
+    </ProjectReference>
     <ProjectReference Include="..\DTO\DTO.csproj">
-      <Project>{bf52ae4f-08cb-4a1c-89bc-18284adaf2d3}</Project>
+      <Project>{0d8f777a-53eb-4fd1-89f1-40d1ea5fde5c}</Project>
       <Name>DTO</Name>
     </ProjectReference>
   </ItemGroup>

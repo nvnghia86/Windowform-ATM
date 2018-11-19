@@ -136,6 +136,9 @@
   <data name="Agribank_Logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Agribank_Logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="anhnen" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\anhnen.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Background" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Background.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -166,6 +169,18 @@
   <data name="Co" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Co.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="demo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\demo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="demo1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\demo1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="demo2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\demo2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="demo3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\demo3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="DoiPin" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\DoiPin.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -175,11 +190,17 @@
   <data name="ENTER" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ENTER.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Enter1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Enter1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="GiaoDichKhac" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\GiaoDichKhac.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="GuiTienTrucTuyen" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\GuiTienTrucTuyen.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="hello" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\hello.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="InSaoKe" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\InSaoKe.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -192,6 +213,9 @@
   </data>
   <data name="SoKhac" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\SoKhac.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tay" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tay.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="ThanhToanHoaDon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ThanhToanHoaDon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>

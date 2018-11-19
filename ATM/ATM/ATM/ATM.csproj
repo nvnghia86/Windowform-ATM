@@ -1,0 +1,206 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E1C735B2-78BC-4A88-B427-5D9A69417033}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>ATM</RootNamespace>
+    <AssemblyName>ATM</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1_atm.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1tr.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2tr.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\5tr.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\500k.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Agribank_Logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\anhnen.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Background.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BienLai.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BienLai1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnArrow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnArrowRight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CamOn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CANCEL.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ChuyenKhoan.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CLEAR.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Co.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\demo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\demo1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\demo2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\demo3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DoiPin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DongY.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ENTER.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Enter1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GiaoDichKhac.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GuiTienTrucTuyen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hello.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\InSaoKe.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Khong.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RutTien.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SoKhac.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tay.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ThanhToanHoaDon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\theatm.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\VanTinTaiKhoan.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BUL\BUL.csproj">
+      <Project>{4a87df04-40ef-45c3-a205-d472254efe9d}</Project>
+      <Name>BUL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DAL\DAL.csproj">
+      <Project>{bf151f36-7979-44e5-850c-10b297b777ec}</Project>
+      <Name>DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DTO\DTO.csproj">
+      <Project>{0d8f777a-53eb-4fd1-89f1-40d1ea5fde5c}</Project>
+      <Name>DTO</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
