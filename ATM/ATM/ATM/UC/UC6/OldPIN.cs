@@ -53,5 +53,10 @@ namespace ATM.UC.UC6
         {
             return lbLockCard;
         }
+
+        private void OldPIN_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

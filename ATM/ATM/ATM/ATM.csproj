@@ -53,11 +53,11 @@
     <Compile Include="FormMain.Designer.cs">
       <DependentUpon>FormMain.cs</DependentUpon>
     </Compile>
-    <Compile Include="HoaDon.cs">
+    <Compile Include="UC\Bill.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="HoaDon.Designer.cs">
-      <DependentUpon>HoaDon.cs</DependentUpon>
+    <Compile Include="UC\Bill.Designer.cs">
+      <DependentUpon>Bill.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -91,6 +91,36 @@
     <Compile Include="UC\UC1\ValidatePin.Designer.cs">
       <DependentUpon>ValidatePin.cs</DependentUpon>
     </Compile>
+    <Compile Include="UC\UC2\Success.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC\UC2\Success.Designer.cs">
+      <DependentUpon>Success.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC\UC2\CustomWidthdraw.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC\UC2\CustomWidthdraw.Designer.cs">
+      <DependentUpon>CustomWidthdraw.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC\UC2\Fail.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC\UC2\Fail.Designer.cs">
+      <DependentUpon>Fail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC\UC2\ReceiveBill.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC\UC2\ReceiveBill.Designer.cs">
+      <DependentUpon>ReceiveBill.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC\UC2\Widthdraw.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC\UC2\Widthdraw.Designer.cs">
+      <DependentUpon>Widthdraw.cs</DependentUpon>
+    </Compile>
     <Compile Include="UC\UC6\ChangePINFail.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -118,8 +148,8 @@
     <EmbeddedResource Include="FormMain.resx">
       <DependentUpon>FormMain.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="HoaDon.resx">
-      <DependentUpon>HoaDon.cs</DependentUpon>
+    <EmbeddedResource Include="UC\Bill.resx">
+      <DependentUpon>Bill.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -145,6 +175,21 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UC\UC1\ValidatePin.resx">
       <DependentUpon>ValidatePin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC\UC2\Success.resx">
+      <DependentUpon>Success.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC\UC2\CustomWidthdraw.resx">
+      <DependentUpon>CustomWidthdraw.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC\UC2\Fail.resx">
+      <DependentUpon>Fail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC\UC2\ReceiveBill.resx">
+      <DependentUpon>ReceiveBill.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC\UC2\Widthdraw.resx">
+      <DependentUpon>Widthdraw.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UC\UC6\ChangePINFail.resx">
       <DependentUpon>ChangePINFail.cs</DependentUpon>

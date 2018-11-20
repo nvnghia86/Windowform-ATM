@@ -164,6 +164,7 @@
             this.Controls.Add(this.label1);
             this.Name = "OldPIN";
             this.Size = new System.Drawing.Size(570, 360);
+            this.Load += new System.EventHandler(this.OldPIN_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

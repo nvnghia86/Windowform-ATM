@@ -10,6 +10,8 @@ using System.Windows.Forms;
 using ATM.UC;
 using ATM.UC.UC6;
 using ATM.UC.UC1;
+using ATM.UC.UC2;
+
 using BUL;
 using DAL;
 
@@ -72,6 +74,10 @@ namespace ATM
             {
                 changePIN();
             }
+            else if (state.Equals("customWidthdraw"))
+            {
+                pressEnterCustomWidthdraw();
+            }
         }
 
         private void btnClear_Click(object sender, EventArgs e)
@@ -120,12 +126,24 @@ namespace ATM
             {
                 exitListMenu();
             }
+            // state widthdraw
+            else if (state.Equals("widthdraw"))
+            {
+                exitWidthdraw();
+            }
 
         }
 
         private void btnLeft1_Click(object sender, EventArgs e)
         {
-
+            if (state.Equals("widthdraw"))
+            {
+                widthdrawSelectOne();
+            }
+            else if (state.Equals("widthdraw"))
+            {
+                widthdrawSelectThree();
+            }
         }
 
         private void btnLeft2_Click(object sender, EventArgs e)
@@ -148,12 +166,23 @@ namespace ATM
 
         private void btnRight1_Click(object sender, EventArgs e)
         {
+            if (state.Equals("menu"))
+            {
+                openStateWidthdraw();
+            }
+            else if (state.Equals("widthdraw"))
+            {
+                widthdrawSelectTwo();
+            }
 
         }
 
         private void btnRight2_Click(object sender, EventArgs e)
         {
-
+            if (state.Equals("widthdraw"))
+            {
+                widthdrawSelectFour();
+            }
         }
 
         private void btnRight3_Click(object sender, EventArgs e)
@@ -181,6 +210,11 @@ namespace ATM
             {
                 exitChangePIN();
             }
+            else if (state.Equals("widthdraw"))
+            {
+                openStateCustomWidthdraw();
+            }
+            
         }
 
         private void btnRight4_Click(object sender, EventArgs e)
@@ -206,6 +240,18 @@ namespace ATM
             {
                 exit();
             }
+            else if(state.Equals("CustomWidthdraw"))
+            {
+                exit();
+            }
+            else if (state.Equals("Fail"))
+            {
+                exit();
+            }
+            else if (state.Equals("Success"))
+            {
+                exit();
+            }
 
         } 
         #endregion
@@ -221,6 +267,8 @@ namespace ATM
                 enterTextBox("1");
             else if (state.Equals("newPIN"))
                 enterTextBox("1");
+            else if (state.Equals("CustomWidthdraw"))
+                enterTextBox("1");
         }
 
         private void btn2_Click(object sender, EventArgs e)
@@ -232,6 +280,8 @@ namespace ATM
             else if (state.Equals("oldPIN"))
                 enterTextBox("2");
             else if (state.Equals("newPIN"))
+                enterTextBox("2");
+            else if (state.Equals("CustomWidthdraw"))
                 enterTextBox("2");
         }
 
@@ -245,6 +295,8 @@ namespace ATM
                 enterTextBox("3");
             else if (state.Equals("newPIN"))
                 enterTextBox("3");
+            else if (state.Equals("CustomWidthdraw"))
+                enterTextBox("3");
         }
 
         private void btn4_Click(object sender, EventArgs e)
@@ -256,6 +308,8 @@ namespace ATM
             else if (state.Equals("oldPIN"))
                 enterTextBox("4");
             else if (state.Equals("newPIN"))
+                enterTextBox("4");
+            else if (state.Equals("CustomWidthdraw"))
                 enterTextBox("4");
         }
 
@@ -269,6 +323,8 @@ namespace ATM
                 enterTextBox("5");
             else if (state.Equals("newPIN"))
                 enterTextBox("5");
+            else if (state.Equals("CustomWidthdraw"))
+                enterTextBox("5");
         }
 
         private void btn6_Click(object sender, EventArgs e)
@@ -280,6 +336,8 @@ namespace ATM
             else if (state.Equals("oldPIN"))
                 enterTextBox("6");
             else if (state.Equals("newPIN"))
+                enterTextBox("6");
+            else if (state.Equals("CustomWidthdraw"))
                 enterTextBox("6");
         }
 
@@ -293,6 +351,9 @@ namespace ATM
                 enterTextBox("7");
             else if (state.Equals("newPIN"))
                 enterTextBox("7");
+
+            else if (state.Equals("CustomWidthdraw"))
+                enterTextBox("7");
         }
 
         private void btn8_Click(object sender, EventArgs e)
@@ -304,6 +365,8 @@ namespace ATM
             else if (state.Equals("oldPIN"))
                 enterTextBox("8");
             else if (state.Equals("newPIN"))
+                enterTextBox("8");
+            else if (state.Equals("CustomWidthdraw"))
                 enterTextBox("8");
         }
 
@@ -317,6 +380,8 @@ namespace ATM
                 enterTextBox("9");
             else if (state.Equals("newPIN"))
                 enterTextBox("9");
+            else if (state.Equals("CustomWidthdraw"))
+                enterTextBox("9");
         }
 
         private void btn0_Click(object sender, EventArgs e)
@@ -328,6 +393,8 @@ namespace ATM
             else if (state.Equals("oldPIN"))
                 enterTextBox("0");
             else if (state.Equals("newPIN"))
+                enterTextBox("0");
+            else if (state.Equals("CustomWidthdraw"))
                 enterTextBox("0");
         } 
         #endregion
@@ -353,6 +420,11 @@ namespace ATM
             else if (state.Equals("newPIN"))
             {
                 NewPIN.Instance.setTextBoxNewPIN(str);
+            }
+            else if (state.Equals("customWidthdraw"))
+
+            {
+                CustomWidthdraw.Instance.setTextBoxCustom(str);
             }
         }
         //////////////////////////////////SV1: Nguyễn Đức Mạnh
@@ -531,6 +603,7 @@ namespace ATM
             }
             state = "oldPIN";
         }
+        
 
 
         // back to state validate card from state validate pin
@@ -612,5 +685,239 @@ namespace ATM
             string logID = "log" + date;
             bool checkCreateLog = logBUL.createLog(logID, date, amount, details, cardTo, logType, atmId, cardNo);
         }
+
+        private void formMain_Load(object sender, EventArgs e)
+        {
+
+        }
+        // Nguyen Van Nghia
+        // back to state list service from state widthdraw
+        private void exitWidthdraw()
+        {
+            if (!panelMain.Controls.Contains(ListMenu.Instance))
+            {
+                panelMain.Controls.Add(ListMenu.Instance);
+                ListMenu.Instance.Dock = DockStyle.Fill;
+                ListMenu.Instance.BringToFront();
+            }
+            else
+            {
+                ListMenu.Instance.BringToFront();
+            }
+            state = "listMenu";
+        }
+
+        // press ENTER in state custom widthdraw
+        private void pressEnterCustomWidthdraw()
+        {
+            bool check = stockBUL.updateQuantity(Convert.ToInt32(CustomWidthdraw.Instance.getTextBoxCustom()));
+            if (check)
+            {
+                if (!panelMain.Controls.Contains(Success.Instance))
+                {
+                    panelMain.Controls.Add(Success.Instance);
+                    Success.Instance.Dock = DockStyle.Fill;
+                    Success.Instance.BringToFront();
+                }
+                else
+                {
+                    Success.Instance.BringToFront();
+                }
+                state = "success";
+                createLog("logtype01", Convert.ToInt32(CustomWidthdraw.Instance.getTextBoxCustom()), "", lbCardNo.Text, "atm01", "Thành công");
+                accountBUL.updateBalance(Convert.ToInt32(CustomWidthdraw.Instance.getTextBoxCustom()), lbCardNo.Text);
+            }
+            else
+            {
+                if (!panelMain.Controls.Contains(Fail.Instance))
+                {
+                    panelMain.Controls.Add(Fail.Instance);
+                    Fail.Instance.Dock = DockStyle.Fill;
+                    Fail.Instance.BringToFront();
+                }
+                else
+                {
+                    Fail.Instance.BringToFront();
+                }
+                state = "fail";
+            }
+        }
+        // select widthdraw 500.000
+        private void widthdrawSelectOne()
+        {
+            bool check = stockBUL.updateQuantity(500000);
+            if (check)
+            {
+                if (!panelMain.Controls.Contains(Success.Instance))
+                {
+                    panelMain.Controls.Add(Success.Instance);
+                    Success.Instance.Dock = DockStyle.Fill;
+                    Success.Instance.BringToFront();
+                }
+                else
+                {
+                    Success.Instance.BringToFront();
+                }
+                state = "success";
+                createLog("logtype01", 500000, "", lbCardNo.Text, "atm01", "Thành công");
+                accountBUL.updateBalance(500000, lbCardNo.Text);
+            }
+            else
+            {
+                if (!panelMain.Controls.Contains(Fail.Instance))
+                {
+                    panelMain.Controls.Add(Fail.Instance);
+                    Fail.Instance.Dock = DockStyle.Fill;
+                    Fail.Instance.BringToFront();
+                }
+                else
+                {
+                    Fail.Instance.BringToFront();
+                }
+                state = "fail";
+            }
+        }
+
+        // switch from control list service to control widthdraw
+        private void openStateWidthdraw()
+        {
+            if (!panelMain.Controls.Contains(Widthdraw.Instance))
+            {
+                panelMain.Controls.Add(Widthdraw.Instance);
+                Widthdraw.Instance.Dock = DockStyle.Fill;
+                Widthdraw.Instance.BringToFront();
+            }
+            else
+            {
+                Widthdraw.Instance.BringToFront();
+            }
+            state = "widthdraw";
+        }
+
+        // select widthdraw 1.000.000
+        private void widthdrawSelectTwo()
+        {
+            bool check = stockBUL.updateQuantity(1000000);
+            if (check)
+            {
+                if (!panelMain.Controls.Contains(Success.Instance))
+                {
+                    panelMain.Controls.Add(Success.Instance);
+                    Success.Instance.Dock = DockStyle.Fill;
+                    Success.Instance.BringToFront();
+                }
+                else
+                {
+                    Success.Instance.BringToFront();
+                }
+                state = "success";
+                createLog("logtype01", 1000000, "", lbCardNo.Text, "atm01", "Thành công");
+                accountBUL.updateBalance(1000000, lbCardNo.Text);
+            }
+            else
+            {
+                if (!panelMain.Controls.Contains(Fail.Instance))
+                {
+                    panelMain.Controls.Add(Fail.Instance);
+                    Fail.Instance.Dock = DockStyle.Fill;
+                    Fail.Instance.BringToFront();
+                }
+                else
+                {
+                    Fail.Instance.BringToFront();
+                }
+                state = "fail";
+            }
+        }
+
+        // select widthdraw 2.000.000
+        private void widthdrawSelectThree()
+        {
+            bool check = stockBUL.updateQuantity(2000000);
+            if (check)
+            {
+                if (!panelMain.Controls.Contains(Success.Instance))
+                {
+                    panelMain.Controls.Add(Success.Instance);
+                    Success.Instance.Dock = DockStyle.Fill;
+                    Success.Instance.BringToFront();
+                }
+                else
+                {
+                    Success.Instance.BringToFront();
+                }
+                state = "success";
+                createLog("logtype01", 2000000, "", lbCardNo.Text, "atm01", "Thành công");
+                accountBUL.updateBalance(2000000, lbCardNo.Text);
+            }
+            else
+            {
+                if (!panelMain.Controls.Contains(Fail.Instance))
+                {
+                    panelMain.Controls.Add(Fail.Instance);
+                    Fail.Instance.Dock = DockStyle.Fill;
+                    Fail.Instance.BringToFront();
+                }
+                else
+                {
+                    Fail.Instance.BringToFront();
+                }
+                state = "fail";
+            }
+        }
+
+        // select widthdraw 5.000.000
+        private void widthdrawSelectFour()
+        {
+            bool check = stockBUL.updateQuantity(5000000);
+            if (check)
+            {
+                if (!panelMain.Controls.Contains(Success.Instance))
+                {
+                    panelMain.Controls.Add(Success.Instance);
+                    Success.Instance.Dock = DockStyle.Fill;
+                    Success.Instance.BringToFront();
+                }
+                else
+                {
+                    Success.Instance.BringToFront();
+                }
+                state = "success";
+                createLog("logtype01", 5000000, "", lbCardNo.Text, "atm01", "Thành công");
+                accountBUL.updateBalance(5000000, lbCardNo.Text);
+            }
+            else
+            {
+                if (!panelMain.Controls.Contains(Fail.Instance))
+                {
+                    panelMain.Controls.Add(Fail.Instance);
+                    Fail.Instance.Dock = DockStyle.Fill;
+                    Fail.Instance.BringToFront();
+                }
+                else
+                {
+                    Fail.Instance.BringToFront();
+                }
+                state = "fail";
+            }
+        }
+        // switch from control widthdraw to control custom widthdraw
+        private void openStateCustomWidthdraw()
+        {
+            if (!panelMain.Controls.Contains(CustomWidthdraw.Instance))
+            {
+                panelMain.Controls.Add(CustomWidthdraw.Instance);
+                CustomWidthdraw.Instance.Dock = DockStyle.Fill;
+                CustomWidthdraw.Instance.BringToFront();
+            }
+            else
+            {
+                CustomWidthdraw.Instance.BringToFront();
+            }
+            state = "customWidthdraw";
+            CustomWidthdraw.Instance.clearTextBoxCustom();
+        }
+        // back to state list service from state widthdraw
+        
     }
 }

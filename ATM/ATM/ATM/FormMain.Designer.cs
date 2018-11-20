@@ -437,6 +437,7 @@
             this.Controls.Add(this.btn1);
             this.Name = "formMain";
             this.Text = "ATM";
+            this.Load += new System.EventHandler(this.formMain_Load);
             this.ResumeLayout(false);
 
         }
