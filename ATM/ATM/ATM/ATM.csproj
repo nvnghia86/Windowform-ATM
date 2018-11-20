@@ -61,6 +61,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UC\Finish.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC\Finish.Designer.cs">
+      <DependentUpon>Finish.cs</DependentUpon>
+    </Compile>
     <Compile Include="UC\Hello.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -125,6 +131,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="UC\Finish.resx">
+      <DependentUpon>Finish.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UC\Hello.resx">
       <DependentUpon>Hello.cs</DependentUpon>
     </EmbeddedResource>
@@ -271,17 +280,17 @@
     <None Include="Resources\VanTinTaiKhoan.png" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\BUL\BUL.csproj">
+    <ProjectReference Include="..\BUL\BULs.csproj">
       <Project>{4a87df04-40ef-45c3-a205-d472254efe9d}</Project>
-      <Name>BUL</Name>
+      <Name>BULs</Name>
     </ProjectReference>
-    <ProjectReference Include="..\DAL\DAL.csproj">
+    <ProjectReference Include="..\DAL\DALs.csproj">
       <Project>{bf151f36-7979-44e5-850c-10b297b777ec}</Project>
-      <Name>DAL</Name>
+      <Name>DALs</Name>
     </ProjectReference>
-    <ProjectReference Include="..\DTO\DTO.csproj">
+    <ProjectReference Include="..\DTO\DTOs.csproj">
       <Project>{0d8f777a-53eb-4fd1-89f1-40d1ea5fde5c}</Project>
-      <Name>DTO</Name>
+      <Name>DTOs</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

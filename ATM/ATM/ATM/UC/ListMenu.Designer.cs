@@ -72,7 +72,7 @@
             this.label10.BackColor = System.Drawing.Color.Transparent;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.Red;
-            this.label10.Location = new System.Drawing.Point(2, 166);
+            this.label10.Location = new System.Drawing.Point(-4, 174);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(214, 24);
             this.label10.TabIndex = 28;
@@ -84,7 +84,7 @@
             this.label9.BackColor = System.Drawing.Color.Transparent;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.Red;
-            this.label9.Location = new System.Drawing.Point(346, 166);
+            this.label9.Location = new System.Drawing.Point(346, 174);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(230, 24);
             this.label9.TabIndex = 27;
@@ -96,7 +96,7 @@
             this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.Red;
-            this.label8.Location = new System.Drawing.Point(414, 223);
+            this.label8.Location = new System.Drawing.Point(414, 227);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(162, 24);
             this.label8.TabIndex = 26;
@@ -108,7 +108,7 @@
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.Red;
-            this.label7.Location = new System.Drawing.Point(414, 281);
+            this.label7.Location = new System.Drawing.Point(414, 282);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(162, 24);
             this.label7.TabIndex = 25;
@@ -132,7 +132,7 @@
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Red;
-            this.label5.Location = new System.Drawing.Point(2, 223);
+            this.label5.Location = new System.Drawing.Point(-4, 227);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(96, 24);
             this.label5.TabIndex = 23;
@@ -144,7 +144,7 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("MS Reference Sans Serif", 14.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Red;
-            this.label4.Location = new System.Drawing.Point(2, 280);
+            this.label4.Location = new System.Drawing.Point(-4, 281);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(207, 24);
             this.label4.TabIndex = 22;
@@ -156,7 +156,7 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Red;
-            this.label3.Location = new System.Drawing.Point(2, 331);
+            this.label3.Location = new System.Drawing.Point(-4, 331);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(77, 24);
             this.label3.TabIndex = 21;

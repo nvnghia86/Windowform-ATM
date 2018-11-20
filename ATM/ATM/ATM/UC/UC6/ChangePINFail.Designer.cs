@@ -35,11 +35,11 @@
             // 
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label5.Location = new System.Drawing.Point(112, 166);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(347, 29);
+            this.label5.Size = new System.Drawing.Size(317, 25);
             this.label5.TabIndex = 5;
             this.label5.Text = "Phát sinh lỗi bạn vui lòng thử lại";
             // 

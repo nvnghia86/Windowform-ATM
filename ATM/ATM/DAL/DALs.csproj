@@ -52,9 +52,9 @@
     <Compile Include="StockDAL.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\DTO\DTO.csproj">
+    <ProjectReference Include="..\DTO\DTOs.csproj">
       <Project>{0d8f777a-53eb-4fd1-89f1-40d1ea5fde5c}</Project>
-      <Name>DTO</Name>
+      <Name>DTOs</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

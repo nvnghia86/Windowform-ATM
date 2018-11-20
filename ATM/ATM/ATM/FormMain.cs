@@ -68,7 +68,7 @@ namespace ATM
 
             }
             // state new PIN
-      else if (state.Equals("newPIN"))
+            else if (state.Equals("newPIN"))
             {
                 changePIN();
             }
@@ -85,6 +85,10 @@ namespace ATM
             else if (state.Equals("validatePin"))
             {
                 ValidatePin.Instance.clearTextBoxPIN();
+            }
+            else if (state.Equals("oldPIN"))
+            {
+                OldPIN.Instance.clearTextBoxPIN();
             }
             // state change PIN
             else if (state.Equals("newPIN"))
@@ -108,6 +112,8 @@ namespace ATM
             else if (state.Equals("oldPIN") || state.Equals("newPIN") || state.Equals("changePINFail") || state.Equals("changePINSuccess"))
             {
                 exitChangePIN();
+                OldPIN.Instance.clearTextBoxPIN();
+                NewPIN.Instance.clearTextBoxNewPIN();
             }
             // back to Validate Card
             else if (state.Equals("menu"))
@@ -165,10 +171,15 @@ namespace ATM
             else if (state.Equals("oldPIN"))
             {
                 checkOldPIN();
+                    
             }
             else if (state.Equals("newPIN"))
             {
                 changePIN();
+            }
+            else if(state.Equals("changePINSuccess"))
+            {
+                exitChangePIN();
             }
         }
 
@@ -185,9 +196,15 @@ namespace ATM
             {
                 exitValidatePIN();
             }
-            else if (state.Equals("oldPIN") || state.Equals("newPIN") || state.Equals("changePINFail") || state.Equals("changePINSuccess"))
+            else if (state.Equals("oldPIN") || state.Equals("newPIN") || state.Equals("changePINFail") )
             {
                 exitChangePIN();
+                OldPIN.Instance.clearTextBoxPIN();
+                NewPIN.Instance.clearTextBoxNewPIN();
+            }
+            else if(state.Equals("changePINSuccess"))
+            {
+                exit();
             }
 
         } 
@@ -554,6 +571,22 @@ namespace ATM
             }
             state = "menu";
             ListMenu.Instance.setNameHello(custBUL.getNameCustomer(lbCardNo.Text));
+        }
+        private void exit()
+        {
+           
+            if (!panelMain.Controls.Contains(Finish.Instance))
+            {
+                panelMain.Controls.Add(Finish.Instance);
+                Finish.Instance.Dock = DockStyle.Fill;
+                Finish.Instance.BringToFront();
+            }
+            else
+            {
+                Finish.Instance.BringToFront();
+            }
+            state = "finish";
+           
         }
 
         // back to state validate card from state list service

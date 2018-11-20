@@ -50,13 +50,13 @@
     <Compile Include="StockBUL.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\DAL\DAL.csproj">
+    <ProjectReference Include="..\DAL\DALs.csproj">
       <Project>{bf151f36-7979-44e5-850c-10b297b777ec}</Project>
-      <Name>DAL</Name>
+      <Name>DALs</Name>
     </ProjectReference>
-    <ProjectReference Include="..\DTO\DTO.csproj">
+    <ProjectReference Include="..\DTO\DTOs.csproj">
       <Project>{0d8f777a-53eb-4fd1-89f1-40d1ea5fde5c}</Project>
-      <Name>DTO</Name>
+      <Name>DTOs</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
