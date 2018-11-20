@@ -33,6 +33,7 @@ namespace ATM
             panelMain.Controls.Add(Hello.Instance);
         }
 
+        #region button_click
         private void btnThe_Click(object sender, EventArgs e)
         {
             numberRecord = configBUL.getNumPerPage();
@@ -51,7 +52,6 @@ namespace ATM
         }
         private void btnEnter_Click(object sender, EventArgs e)
         {
-
             // state validate card
             if (state.Equals("validateCard"))
             {
@@ -66,16 +66,12 @@ namespace ATM
             {
                 checkOldPIN();
 
-
             }
-            // state change PIN
-
-            else if (state.Equals("newPIN"))
+            // state new PIN
+      else if (state.Equals("newPIN"))
             {
                 changePIN();
             }
-
-
         }
 
         private void btnClear_Click(object sender, EventArgs e)
@@ -91,38 +87,113 @@ namespace ATM
                 ValidatePin.Instance.clearTextBoxPIN();
             }
             // state change PIN
-            else if (state.Equals("changePIN"))
+            else if (state.Equals("newPIN"))
             {
                 NewPIN.Instance.clearTextBoxNewPIN();
             }
-
-
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
-            //back to hello
+            // back to hello
             if (state.Equals("validateCard"))
             {
                 exitValidatecard();
             }
-            // back to List service 
-            else if (state.Equals("newPIN") || state.Equals("changePINFail") || state.Equals("changePINSuccess"))
+            else if(state.Equals("validatePin"))
+            {
+                exitValidatecard();
+            }
+            // back to List menu
+            else if (state.Equals("oldPIN") || state.Equals("newPIN") || state.Equals("changePINFail") || state.Equals("changePINSuccess"))
             {
                 exitChangePIN();
             }
             // back to Validate Card
             else if (state.Equals("menu"))
             {
-                exitListService();
+                exitListMenu();
             }
-            // back to List service 
-            
+
         }
 
+        private void btnLeft1_Click(object sender, EventArgs e)
+        {
 
-        #region key_click
+        }
 
+        private void btnLeft2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnLeft3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnLeft4_Click(object sender, EventArgs e)
+        {
+            if (state.Equals("menu"))
+            {
+                openStateOldPIN();
+            }         
+        }
+
+        private void btnRight1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnRight2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnRight3_Click(object sender, EventArgs e)
+        {
+            // state validate card
+            if (state.Equals("validateCard"))
+            {
+                checkCardNo();
+            }
+            // state validate PIN
+            else if (state.Equals("validatePin"))
+            {
+                checkPIN();
+            }
+            else if (state.Equals("oldPIN"))
+            {
+                checkOldPIN();
+            }
+            else if (state.Equals("newPIN"))
+            {
+                changePIN();
+            }
+        }
+
+        private void btnRight4_Click(object sender, EventArgs e)
+        {
+            // state validate card
+            if (state.Equals("validateCard"))
+            {
+                exitValidatecard();
+
+            }
+            // state validate PIN
+            else if (state.Equals("validatePin"))
+            {
+                exitValidatePIN();
+            }
+            else if (state.Equals("oldPIN") || state.Equals("newPIN") || state.Equals("changePINFail") || state.Equals("changePINSuccess"))
+            {
+                exitChangePIN();
+            }
+
+        } 
+        #endregion
+
+        #region Key_click
         private void btn1_Click(object sender, EventArgs e)
         {
             if (state.Equals("validateCard"))
@@ -133,7 +204,6 @@ namespace ATM
                 enterTextBox("1");
             else if (state.Equals("newPIN"))
                 enterTextBox("1");
-
         }
 
         private void btn2_Click(object sender, EventArgs e)
@@ -156,7 +226,7 @@ namespace ATM
                 enterTextBox("3");
             else if (state.Equals("oldPIN"))
                 enterTextBox("3");
-            else if (state.Equals("newPINPIN"))
+            else if (state.Equals("newPIN"))
                 enterTextBox("3");
         }
 
@@ -168,7 +238,7 @@ namespace ATM
                 enterTextBox("4");
             else if (state.Equals("oldPIN"))
                 enterTextBox("4");
-            else if (state.Equals("newPINPIN"))
+            else if (state.Equals("newPIN"))
                 enterTextBox("4");
         }
 
@@ -206,7 +276,6 @@ namespace ATM
                 enterTextBox("7");
             else if (state.Equals("newPIN"))
                 enterTextBox("7");
-
         }
 
         private void btn8_Click(object sender, EventArgs e)
@@ -219,7 +288,6 @@ namespace ATM
                 enterTextBox("8");
             else if (state.Equals("newPIN"))
                 enterTextBox("8");
-
         }
 
         private void btn9_Click(object sender, EventArgs e)
@@ -232,7 +300,6 @@ namespace ATM
                 enterTextBox("9");
             else if (state.Equals("newPIN"))
                 enterTextBox("9");
-
         }
 
         private void btn0_Click(object sender, EventArgs e)
@@ -245,11 +312,10 @@ namespace ATM
                 enterTextBox("0");
             else if (state.Equals("newPIN"))
                 enterTextBox("0");
-
-        }
-
+        } 
         #endregion
 
+        //////////////////////////////////SV1: Nguyễn Đức Mạnh
         private void enterTextBox(string str)
         {
             // state validate card
@@ -272,89 +338,6 @@ namespace ATM
                 NewPIN.Instance.setTextBoxNewPIN(str);
             }
         }
-
-
-        #region button
-        private void btnLeft1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnLeft2_Click(object sender, EventArgs e)
-        {
-        
-        }
-
-        private void btnLeft3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnLeft4_Click(object sender, EventArgs e)
-        {
-            // change PIN
-            if (state.Equals("menu"))
-            {
-                openStateOldPIN();
-            }
-
-        }
-
-        private void btnRight1_Click(object sender, EventArgs e)
-        {
-            // state widthdraw
-            //if (state.Equals("widthdraw"))
-            //{
-            //    //widthdrawSelectFive();
-            //}
-        }
-
-        private void btnRight2_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void btnRight3_Click(object sender, EventArgs e)
-        {
-            // state validate card
-            if (state.Equals("validateCard"))
-            {
-                checkCardNo();
-            }
-            // state validate PIN
-            else if (state.Equals("validatePin"))
-            {
-                checkPIN();
-            }
-            else if (state.Equals("oldPIN"))
-            {
-                checkOldPIN();
-            }
-            else if (state.Equals("newPIN"))
-            {
-                changePIN();
-            }
-        }
-
-        private void btnRight4_Click(object sender, EventArgs e)
-        {
-            // state validate card
-            if (state.Equals("validateCard"))
-            {
-                ValidateCard.Instance.clearTextBoxCardNo();
-            }
-            // state validate PIN
-            else if (state.Equals("validatePin"))
-            {
-                exitValidatePIN();
-            }
-            // view history
-          
-           
-            
-        }
-        #endregion
-
-
         //////////////////////////////////SV1: Nguyễn Đức Mạnh
         //back hello
         private void exitValidatecard()
@@ -370,6 +353,8 @@ namespace ATM
                 Hello.Instance.BringToFront();
             }
             state = "hello";
+            ValidateCard.Instance.getlbCheckMa().Visible = false;
+
         }
         // function to check CardNo
         private void checkCardNo()
@@ -514,9 +499,6 @@ namespace ATM
                 }
             }
         }
-
-        // switch from control list service to control view history
-       
         // switch from control list service to control change pin
         private void openStateOldPIN()
         {
@@ -532,7 +514,7 @@ namespace ATM
             }
             state = "oldPIN";
         }
-      
+
 
         // back to state validate card from state validate pin
         private void exitValidatePIN()
@@ -555,7 +537,7 @@ namespace ATM
             state = "validateCard";
         }
 
-        // back to state list service from state change PIN
+        // back to state list menu from state change PIN
         private void exitChangePIN()
         {
             NewPIN.Instance.clearTextBoxNewPIN();
@@ -575,7 +557,7 @@ namespace ATM
         }
 
         // back to state validate card from state list service
-        private void exitListService()
+        private void exitListMenu()
         {
             if (!panelMain.Controls.Contains(ValidateCard.Instance))
             {
@@ -597,8 +579,5 @@ namespace ATM
             string logID = "log" + date;
             bool checkCreateLog = logBUL.createLog(logID, date, amount, details, cardTo, logType, atmId, cardNo);
         }
-
-
-
     }
 }

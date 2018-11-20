@@ -6,16 +6,16 @@ using System.Threading.Tasks;
 
 namespace DTO
 {
-    public class Stock
+    public class StockDTO
     {
         public string stockID { get; set; }
         public int quantity { get; set; }
         public string moneyID { get; set; }
         public string atmID { get; set; }
 
-        public Stock() { }
+        public StockDTO() { }
 
-        public Stock(string id, int quantity, string moneyid, string atmid) {
+        public StockDTO(string id, int quantity, string moneyid, string atmid) {
             this.stockID = id;
             this.quantity = quantity;
             this.moneyID = moneyid;

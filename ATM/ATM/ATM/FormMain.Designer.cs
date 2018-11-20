@@ -128,6 +128,7 @@
             this.btn0.TabIndex = 19;
             this.btn0.Text = "0";
             this.btn0.UseVisualStyleBackColor = true;
+            this.btn0.Click += new System.EventHandler(this.btn0_Click);
             // 
             // btn9
             // 
@@ -139,6 +140,7 @@
             this.btn9.TabIndex = 18;
             this.btn9.Text = "9";
             this.btn9.UseVisualStyleBackColor = true;
+            this.btn9.Click += new System.EventHandler(this.btn9_Click);
             // 
             // btn8
             // 
@@ -150,6 +152,7 @@
             this.btn8.TabIndex = 17;
             this.btn8.Text = "8";
             this.btn8.UseVisualStyleBackColor = true;
+            this.btn8.Click += new System.EventHandler(this.btn8_Click);
             // 
             // btn7
             // 
@@ -161,6 +164,7 @@
             this.btn7.TabIndex = 16;
             this.btn7.Text = "7";
             this.btn7.UseVisualStyleBackColor = true;
+            this.btn7.Click += new System.EventHandler(this.btn7_Click);
             // 
             // btn6
             // 
@@ -172,6 +176,7 @@
             this.btn6.TabIndex = 15;
             this.btn6.Text = "6";
             this.btn6.UseVisualStyleBackColor = true;
+            this.btn6.Click += new System.EventHandler(this.btn6_Click);
             // 
             // btn5
             // 
@@ -183,6 +188,7 @@
             this.btn5.TabIndex = 14;
             this.btn5.Text = "5";
             this.btn5.UseVisualStyleBackColor = true;
+            this.btn5.Click += new System.EventHandler(this.btn5_Click);
             // 
             // button13
             // 
@@ -205,6 +211,7 @@
             this.btn4.TabIndex = 12;
             this.btn4.Text = "4";
             this.btn4.UseVisualStyleBackColor = true;
+            this.btn4.Click += new System.EventHandler(this.btn4_Click);
             // 
             // button11
             // 
@@ -227,6 +234,7 @@
             this.btn3.TabIndex = 10;
             this.btn3.Text = "3";
             this.btn3.UseVisualStyleBackColor = true;
+            this.btn3.Click += new System.EventHandler(this.btn3_Click);
             // 
             // btn2
             // 
@@ -238,6 +246,7 @@
             this.btn2.TabIndex = 31;
             this.btn2.Text = "2";
             this.btn2.UseVisualStyleBackColor = true;
+            this.btn2.Click += new System.EventHandler(this.btn2_Click);
             // 
             // btn1
             // 
@@ -249,6 +258,7 @@
             this.btn1.TabIndex = 32;
             this.btn1.Text = "1";
             this.btn1.UseVisualStyleBackColor = true;
+            this.btn1.Click += new System.EventHandler(this.btn1_Click);
             // 
             // panel1
             // 
@@ -260,7 +270,7 @@
             // 
             // btnCancel
             // 
-            this.btnCancel.BackgroundImage = global::ATM.Properties.Resources.CANCEL;
+            this.btnCancel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnCancel.BackgroundImage")));
             this.btnCancel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnCancel.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.btnCancel.Location = new System.Drawing.Point(562, 480);
@@ -272,7 +282,7 @@
             // 
             // btnClear
             // 
-            this.btnClear.BackgroundImage = global::ATM.Properties.Resources.CLEAR;
+            this.btnClear.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnClear.BackgroundImage")));
             this.btnClear.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnClear.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.btnClear.Location = new System.Drawing.Point(562, 430);
@@ -284,7 +294,7 @@
             // 
             // btnRight1
             // 
-            this.btnRight1.BackgroundImage = global::ATM.Properties.Resources.btnArrowRight;
+            this.btnRight1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnRight1.BackgroundImage")));
             this.btnRight1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnRight1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.btnRight1.Location = new System.Drawing.Point(840, 174);
@@ -292,10 +302,11 @@
             this.btnRight1.Size = new System.Drawing.Size(87, 38);
             this.btnRight1.TabIndex = 28;
             this.btnRight1.UseVisualStyleBackColor = true;
+            this.btnRight1.Click += new System.EventHandler(this.btnRight1_Click);
             // 
             // btnRight2
             // 
-            this.btnRight2.BackgroundImage = global::ATM.Properties.Resources.btnArrowRight;
+            this.btnRight2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnRight2.BackgroundImage")));
             this.btnRight2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnRight2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.btnRight2.Location = new System.Drawing.Point(840, 221);
@@ -303,10 +314,11 @@
             this.btnRight2.Size = new System.Drawing.Size(87, 38);
             this.btnRight2.TabIndex = 27;
             this.btnRight2.UseVisualStyleBackColor = true;
+            this.btnRight2.Click += new System.EventHandler(this.btnRight2_Click);
             // 
             // btnLeft1
             // 
-            this.btnLeft1.BackgroundImage = global::ATM.Properties.Resources.btnArrow;
+            this.btnLeft1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnLeft1.BackgroundImage")));
             this.btnLeft1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnLeft1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.btnLeft1.Location = new System.Drawing.Point(110, 174);
@@ -314,10 +326,11 @@
             this.btnLeft1.Size = new System.Drawing.Size(87, 38);
             this.btnLeft1.TabIndex = 26;
             this.btnLeft1.UseVisualStyleBackColor = true;
+            this.btnLeft1.Click += new System.EventHandler(this.btnLeft1_Click);
             // 
             // btnRight3
             // 
-            this.btnRight3.BackgroundImage = global::ATM.Properties.Resources.btnArrowRight;
+            this.btnRight3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnRight3.BackgroundImage")));
             this.btnRight3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnRight3.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.btnRight3.Location = new System.Drawing.Point(840, 269);
@@ -325,10 +338,11 @@
             this.btnRight3.Size = new System.Drawing.Size(87, 38);
             this.btnRight3.TabIndex = 25;
             this.btnRight3.UseVisualStyleBackColor = true;
+            this.btnRight3.Click += new System.EventHandler(this.btnRight3_Click);
             // 
             // btnLeft2
             // 
-            this.btnLeft2.BackgroundImage = global::ATM.Properties.Resources.btnArrow;
+            this.btnLeft2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnLeft2.BackgroundImage")));
             this.btnLeft2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnLeft2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.btnLeft2.Location = new System.Drawing.Point(110, 221);
@@ -336,10 +350,11 @@
             this.btnLeft2.Size = new System.Drawing.Size(87, 38);
             this.btnLeft2.TabIndex = 24;
             this.btnLeft2.UseVisualStyleBackColor = true;
+            this.btnLeft2.Click += new System.EventHandler(this.btnLeft2_Click);
             // 
             // btnRight4
             // 
-            this.btnRight4.BackgroundImage = global::ATM.Properties.Resources.btnArrowRight;
+            this.btnRight4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnRight4.BackgroundImage")));
             this.btnRight4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnRight4.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.btnRight4.Location = new System.Drawing.Point(840, 324);
@@ -347,10 +362,11 @@
             this.btnRight4.Size = new System.Drawing.Size(87, 38);
             this.btnRight4.TabIndex = 23;
             this.btnRight4.UseVisualStyleBackColor = true;
+            this.btnRight4.Click += new System.EventHandler(this.btnRight4_Click);
             // 
             // btnLeft3
             // 
-            this.btnLeft3.BackgroundImage = global::ATM.Properties.Resources.btnArrow;
+            this.btnLeft3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnLeft3.BackgroundImage")));
             this.btnLeft3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnLeft3.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.btnLeft3.Location = new System.Drawing.Point(110, 269);
@@ -358,10 +374,11 @@
             this.btnLeft3.Size = new System.Drawing.Size(87, 38);
             this.btnLeft3.TabIndex = 22;
             this.btnLeft3.UseVisualStyleBackColor = true;
+            this.btnLeft3.Click += new System.EventHandler(this.btnLeft3_Click);
             // 
             // btnLeft4
             // 
-            this.btnLeft4.BackgroundImage = global::ATM.Properties.Resources.btnArrow;
+            this.btnLeft4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnLeft4.BackgroundImage")));
             this.btnLeft4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnLeft4.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.btnLeft4.Location = new System.Drawing.Point(110, 324);
@@ -369,10 +386,11 @@
             this.btnLeft4.Size = new System.Drawing.Size(87, 38);
             this.btnLeft4.TabIndex = 21;
             this.btnLeft4.UseVisualStyleBackColor = true;
+            this.btnLeft4.Click += new System.EventHandler(this.btnLeft4_Click);
             // 
             // btnEnter
             // 
-            this.btnEnter.BackgroundImage = global::ATM.Properties.Resources.Enter1;
+            this.btnEnter.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnEnter.BackgroundImage")));
             this.btnEnter.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnEnter.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.btnEnter.Location = new System.Drawing.Point(562, 380);

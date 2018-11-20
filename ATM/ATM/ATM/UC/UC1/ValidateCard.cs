@@ -35,6 +35,7 @@ namespace ATM.UC.UC1
         public void clearTextBoxCardNo()
         {
             tbCardNo.Text = "";
+            
         }
         public void setTextBoxCardNo(string str)
         {
@@ -43,6 +44,10 @@ namespace ATM.UC.UC1
         public Label getlbCheckMa()
         {
             return lbCheckMaThe;
+        }
+        public void hideCheckMa()
+        {
+            lbCheckMaThe.Visible = false;
         }
     }
 }
