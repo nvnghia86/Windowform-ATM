@@ -78,6 +78,7 @@ namespace ATM
             {
                 pressEnterCustomWidthdraw();
             }
+
         }
 
         private void btnClear_Click(object sender, EventArgs e)
@@ -140,15 +141,15 @@ namespace ATM
             {
                 widthdrawSelectOne();
             }
-            else if (state.Equals("widthdraw"))
-            {
-                widthdrawSelectThree();
-            }
+            
         }
 
         private void btnLeft2_Click(object sender, EventArgs e)
         {
-
+            if (state.Equals("widthdraw"))
+            {
+                widthdrawSelectThree();
+            }
         }
 
         private void btnLeft3_Click(object sender, EventArgs e)
@@ -183,6 +184,10 @@ namespace ATM
             {
                 widthdrawSelectFour();
             }
+            else if (state.Equals("success"))
+            {
+                exitChangePIN();
+            }
         }
 
         private void btnRight3_Click(object sender, EventArgs e)
@@ -214,7 +219,19 @@ namespace ATM
             {
                 openStateCustomWidthdraw();
             }
-            
+            else if (state.Equals("fail"))
+            {
+                exitChangePIN();
+            }
+            else if (state.Equals("success"))
+            {
+                exitChangePIN();
+            }
+            else if (state.Equals("customWidthdraw"))
+            {
+                pressEnterCustomWidthdraw();
+            }
+
         }
 
         private void btnRight4_Click(object sender, EventArgs e)
@@ -240,17 +257,17 @@ namespace ATM
             {
                 exit();
             }
-            else if(state.Equals("CustomWidthdraw"))
+            else if(state.Equals("customWidthdraw"))
             {
-                exit();
+                exitValidatecard();
             }
-            else if (state.Equals("Fail"))
+            else if (state.Equals("fail"))
             {
-                exit();
+                exitValidatecard();
             }
-            else if (state.Equals("Success"))
+            else if (state.Equals("success"))
             {
-                exit();
+                exitValidatecard();
             }
 
         } 
@@ -267,7 +284,7 @@ namespace ATM
                 enterTextBox("1");
             else if (state.Equals("newPIN"))
                 enterTextBox("1");
-            else if (state.Equals("CustomWidthdraw"))
+            else if (state.Equals("customWidthdraw"))
                 enterTextBox("1");
         }
 
@@ -281,7 +298,7 @@ namespace ATM
                 enterTextBox("2");
             else if (state.Equals("newPIN"))
                 enterTextBox("2");
-            else if (state.Equals("CustomWidthdraw"))
+            else if (state.Equals("customWidthdraw"))
                 enterTextBox("2");
         }
 
@@ -295,7 +312,7 @@ namespace ATM
                 enterTextBox("3");
             else if (state.Equals("newPIN"))
                 enterTextBox("3");
-            else if (state.Equals("CustomWidthdraw"))
+            else if (state.Equals("customWidthdraw"))
                 enterTextBox("3");
         }
 
@@ -309,7 +326,7 @@ namespace ATM
                 enterTextBox("4");
             else if (state.Equals("newPIN"))
                 enterTextBox("4");
-            else if (state.Equals("CustomWidthdraw"))
+            else if (state.Equals("customWidthdraw"))
                 enterTextBox("4");
         }
 
@@ -323,7 +340,7 @@ namespace ATM
                 enterTextBox("5");
             else if (state.Equals("newPIN"))
                 enterTextBox("5");
-            else if (state.Equals("CustomWidthdraw"))
+            else if (state.Equals("customWidthdraw"))
                 enterTextBox("5");
         }
 
@@ -337,7 +354,7 @@ namespace ATM
                 enterTextBox("6");
             else if (state.Equals("newPIN"))
                 enterTextBox("6");
-            else if (state.Equals("CustomWidthdraw"))
+            else if (state.Equals("customWidthdraw"))
                 enterTextBox("6");
         }
 
@@ -351,8 +368,7 @@ namespace ATM
                 enterTextBox("7");
             else if (state.Equals("newPIN"))
                 enterTextBox("7");
-
-            else if (state.Equals("CustomWidthdraw"))
+            else if (state.Equals("customWidthdraw"))
                 enterTextBox("7");
         }
 
@@ -366,7 +382,7 @@ namespace ATM
                 enterTextBox("8");
             else if (state.Equals("newPIN"))
                 enterTextBox("8");
-            else if (state.Equals("CustomWidthdraw"))
+            else if (state.Equals("customWidthdraw"))
                 enterTextBox("8");
         }
 
@@ -380,7 +396,7 @@ namespace ATM
                 enterTextBox("9");
             else if (state.Equals("newPIN"))
                 enterTextBox("9");
-            else if (state.Equals("CustomWidthdraw"))
+            else if (state.Equals("customWidthdraw"))
                 enterTextBox("9");
         }
 
@@ -394,7 +410,7 @@ namespace ATM
                 enterTextBox("0");
             else if (state.Equals("newPIN"))
                 enterTextBox("0");
-            else if (state.Equals("CustomWidthdraw"))
+            else if (state.Equals("customWidthdraw"))
                 enterTextBox("0");
         } 
         #endregion
@@ -659,8 +675,8 @@ namespace ATM
                 Finish.Instance.BringToFront();
             }
             state = "finish";
-           
         }
+        
 
         // back to state validate card from state list service
         private void exitListMenu()
@@ -916,8 +932,6 @@ namespace ATM
             }
             state = "customWidthdraw";
             CustomWidthdraw.Instance.clearTextBoxCustom();
-        }
-        // back to state list service from state widthdraw
-        
+        }   
     }
 }

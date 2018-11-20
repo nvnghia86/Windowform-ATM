@@ -27,12 +27,8 @@ namespace ATM.UC.UC2
         public ReceiveBill()
         {
             InitializeComponent();
-            ReceiveBill.state = "menuReceiveBill";
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
+        
     }
 }

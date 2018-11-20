@@ -29,5 +29,6 @@ namespace ATM.UC.UC2
         {
             InitializeComponent();
         }
+
     }
 }

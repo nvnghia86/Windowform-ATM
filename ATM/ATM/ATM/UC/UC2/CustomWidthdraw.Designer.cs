@@ -45,7 +45,7 @@
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.BackgroundImage = global::ATM.Properties.Resources.DongY;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(410, 251);
+            this.pictureBox1.Location = new System.Drawing.Point(410, 268);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(160, 35);
             this.pictureBox1.TabIndex = 0;
@@ -56,7 +56,7 @@
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.BackgroundImage = global::ATM.Properties.Resources.Khong;
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox2.Location = new System.Drawing.Point(410, 309);
+            this.pictureBox2.Location = new System.Drawing.Point(410, 322);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(160, 35);
             this.pictureBox2.TabIndex = 1;
@@ -124,7 +124,7 @@
             this.label5.TabIndex = 2;
             this.label5.Text = "50000";
             // 
-            // EnterMoney
+            // CustomWidthdraw
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -137,7 +137,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
-            this.Name = "EnterMoney";
+            this.Name = "CustomWidthdraw";
             this.Size = new System.Drawing.Size(570, 360);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();

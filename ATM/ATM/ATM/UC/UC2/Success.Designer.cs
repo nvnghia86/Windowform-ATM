@@ -52,7 +52,7 @@
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.BackgroundImage = global::ATM.Properties.Resources.Co;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(441, 225);
+            this.pictureBox1.Location = new System.Drawing.Point(441, 259);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(129, 35);
             this.pictureBox1.TabIndex = 1;
@@ -63,7 +63,7 @@
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.BackgroundImage = global::ATM.Properties.Resources.Khong;
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox2.Location = new System.Drawing.Point(441, 287);
+            this.pictureBox2.Location = new System.Drawing.Point(441, 311);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(129, 35);
             this.pictureBox2.TabIndex = 1;
@@ -80,7 +80,7 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "Giao dịch đã thành công";
             // 
-            // Done
+            // Success
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -89,7 +89,7 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Name = "Done";
+            this.Name = "Success";
             this.Size = new System.Drawing.Size(570, 360);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
