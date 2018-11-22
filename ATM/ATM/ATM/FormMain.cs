@@ -270,11 +270,14 @@ namespace ATM
                 checkCardStateCashTransfer();
             }
             // state cash transfer money
+<<<<<<< HEAD
             else if (state.Equals("cashTransferMoney"))
             {
                 processCashTransfer();
             }
 
+=======
+>>>>>>> db17b90b931b617b42c1de16a7c59bb366246c31
             else if (state.Equals("widthdraw"))
             {
                 openStateCustomWidthdraw();
@@ -1113,7 +1116,6 @@ namespace ATM
 
         }
         // Nguyen Van Nghia
-
         private void openReceiveBill()
         {
             if (!panelMain.Controls.Contains(ReceiveBill.Instance))

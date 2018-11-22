@@ -1,0 +1,53 @@
+E:\Windowform-ATM\ATM\ATM\ATM\obj\Debug\ATM.csprojAssemblyReference.cache
+E:\Windowform-ATM\ATM\ATM\ATM\obj\Debug\ATM.formMain.resources
+E:\Windowform-ATM\ATM\ATM\ATM\obj\Debug\ATM.HoaDon.resources
+E:\Windowform-ATM\ATM\ATM\ATM\obj\Debug\ATM.Properties.Resources.resources
+E:\Windowform-ATM\ATM\ATM\ATM\obj\Debug\ATM.csproj.GenerateResource.cache
+E:\Windowform-ATM\ATM\ATM\ATM\obj\Debug\ATM.csproj.CoreCompileInputs.cache
+E:\Windowform-ATM\ATM\ATM\ATM\bin\Debug\ATM.exe.config
+E:\Windowform-ATM\ATM\ATM\ATM\bin\Debug\ATM.exe
+E:\Windowform-ATM\ATM\ATM\ATM\bin\Debug\ATM.pdb
+E:\Windowform-ATM\ATM\ATM\ATM\bin\Debug\BUL.dll
+E:\Windowform-ATM\ATM\ATM\ATM\bin\Debug\DAL.dll
+E:\Windowform-ATM\ATM\ATM\ATM\bin\Debug\DTO.dll
+E:\Windowform-ATM\ATM\ATM\ATM\bin\Debug\BUL.pdb
+E:\Windowform-ATM\ATM\ATM\ATM\bin\Debug\DAL.pdb
+E:\Windowform-ATM\ATM\ATM\ATM\bin\Debug\DTO.pdb
+E:\Windowform-ATM\ATM\ATM\ATM\obj\Debug\ATM.csproj.CopyComplete
+E:\Windowform-ATM\ATM\ATM\ATM\obj\Debug\ATM.exe
+E:\Windowform-ATM\ATM\ATM\ATM\obj\Debug\ATM.pdb
+E:\Windowform-ATM\ATM\ATM\ATM\obj\Debug\ATM.UC.Hello.resources
+E:\Windowform-ATM\ATM\ATM\ATM\obj\Debug\ATM.UC.UC1.ValidateCard.resources
+E:\Windowform-ATM\ATM\ATM\ATM\obj\Debug\ATM.UC.UC6.ChangePINFail.resources
+E:\Windowform-ATM\ATM\ATM\ATM\obj\Debug\ATM.UC.UC6.ChangePINSuccess.resources
+E:\Windowform-ATM\ATM\ATM\ATM\obj\Debug\ATM.UC.UC6.newPIN.resources
+E:\Windowform-ATM\ATM\ATM\ATM\obj\Debug\ATM.UC.UC1.ValidatePin.resources
+E:\Windowform-ATM\ATM\ATM\ATM\obj\Debug\ATM.UC.UC6.OldPIN.resources
+E:\Windowform-ATM\ATM\ATM\ATM\obj\Debug\ATM.UC.ListMenu.resources
+E:\Windowform-ATM\ATM\ATM\ATM\obj\Debug\ATM.UC.Finish.resources
+C:\Users\this PC\Desktop\ATM\ATM\bin\Debug\ATM.exe.config
+C:\Users\this PC\Desktop\ATM\ATM\bin\Debug\ATM.exe
+C:\Users\this PC\Desktop\ATM\ATM\bin\Debug\ATM.pdb
+C:\Users\this PC\Desktop\ATM\ATM\bin\Debug\BUL.dll
+C:\Users\this PC\Desktop\ATM\ATM\bin\Debug\DAL.dll
+C:\Users\this PC\Desktop\ATM\ATM\bin\Debug\DTO.dll
+C:\Users\this PC\Desktop\ATM\ATM\bin\Debug\BUL.pdb
+C:\Users\this PC\Desktop\ATM\ATM\bin\Debug\DAL.pdb
+C:\Users\this PC\Desktop\ATM\ATM\bin\Debug\DTO.pdb
+C:\Users\this PC\Desktop\ATM\ATM\obj\Debug\ATM.csprojAssemblyReference.cache
+C:\Users\this PC\Desktop\ATM\ATM\obj\Debug\ATM.formMain.resources
+C:\Users\this PC\Desktop\ATM\ATM\obj\Debug\ATM.Properties.Resources.resources
+C:\Users\this PC\Desktop\ATM\ATM\obj\Debug\ATM.UC.Finish.resources
+C:\Users\this PC\Desktop\ATM\ATM\obj\Debug\ATM.UC.Hello.resources
+C:\Users\this PC\Desktop\ATM\ATM\obj\Debug\ATM.UC.ListMenu.resources
+C:\Users\this PC\Desktop\ATM\ATM\obj\Debug\ATM.UC.UC1.ValidateCard.resources
+C:\Users\this PC\Desktop\ATM\ATM\obj\Debug\ATM.UC.UC1.ValidatePin.resources
+C:\Users\this PC\Desktop\ATM\ATM\obj\Debug\ATM.UC.UC6.ChangePINFail.resources
+C:\Users\this PC\Desktop\ATM\ATM\obj\Debug\ATM.UC.UC6.ChangePINSuccess.resources
+C:\Users\this PC\Desktop\ATM\ATM\obj\Debug\ATM.UC.UC6.NewPIN.resources
+C:\Users\this PC\Desktop\ATM\ATM\obj\Debug\ATM.UC.UC6.OldPIN.resources
+C:\Users\this PC\Desktop\ATM\ATM\obj\Debug\ATM.csproj.GenerateResource.cache
+C:\Users\this PC\Desktop\ATM\ATM\obj\Debug\ATM.csproj.CoreCompileInputs.cache
+C:\Users\this PC\Desktop\ATM\ATM\obj\Debug\ATM.csproj.CopyComplete
+C:\Users\this PC\Desktop\ATM\ATM\obj\Debug\ATM.exe
+C:\Users\this PC\Desktop\ATM\ATM\obj\Debug\ATM.pdb

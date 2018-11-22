@@ -10,6 +10,7 @@ namespace BUL
     public class CardBUL
     {
         CardDAL cardDal = new CardDAL();
+        
 
         // Validate Card
         public bool checkCardNo(string cardNo) {
@@ -28,11 +29,11 @@ namespace BUL
 
         //get attempt
         public bool checkAttempt(string cardNo) {
-            if (cardDal.getAttempt(cardNo) >= 0 && cardDal.getAttempt(cardNo) < 3)
+            if (cardDal.getAttempt(cardNo) >= 0 && cardDal.getAttempt(cardNo) < 5)
             {
                 return true;
             }
-            else if (cardDal.getAttempt(cardNo) == -1 || cardDal.getAttempt(cardNo) == 3)
+            else if (cardDal.getAttempt(cardNo) == -1 || cardDal.getAttempt(cardNo) == 5)
             {
                 return false;
             }
@@ -103,5 +104,9 @@ namespace BUL
             }
             return false;
         }
+
+
+
+
     }
 }

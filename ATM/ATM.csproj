@@ -53,14 +53,13 @@
     <Compile Include="FormMain.Designer.cs">
       <DependentUpon>FormMain.cs</DependentUpon>
     </Compile>
-    <Compile Include="UC\Bill.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UC\Bill.Designer.cs">
-      <DependentUpon>Bill.cs</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="UC\Finish.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -91,60 +90,6 @@
     <Compile Include="UC\UC1\ValidatePin.Designer.cs">
       <DependentUpon>ValidatePin.cs</DependentUpon>
     </Compile>
-    <Compile Include="UC\UC2\Form1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UC\UC2\Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UC\UC2\Success.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UC\UC2\Success.Designer.cs">
-      <DependentUpon>Success.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UC\UC2\CustomWidthdraw.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UC\UC2\CustomWidthdraw.Designer.cs">
-      <DependentUpon>CustomWidthdraw.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UC\UC2\Fail.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UC\UC2\Fail.Designer.cs">
-      <DependentUpon>Fail.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UC\UC2\ReceiveBill.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UC\UC2\ReceiveBill.Designer.cs">
-      <DependentUpon>ReceiveBill.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UC\UC2\Widthdraw.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UC\UC2\Widthdraw.Designer.cs">
-      <DependentUpon>Widthdraw.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UC\UC3\CashTransfer.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UC\UC3\CashTransfer.Designer.cs">
-      <DependentUpon>CashTransfer.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UC\UC3\Fail1.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UC\UC3\Fail1.Designer.cs">
-      <DependentUpon>Fail1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UC\UC3\Success1.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UC\UC3\Success1.Designer.cs">
-      <DependentUpon>Success1.cs</DependentUpon>
-    </Compile>
     <Compile Include="UC\UC6\ChangePINFail.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -172,19 +117,11 @@
     <EmbeddedResource Include="FormMain.resx">
       <DependentUpon>FormMain.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UC\Bill.resx">
-      <DependentUpon>Bill.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <EmbeddedResource Include="UC\Finish.resx">
       <DependentUpon>Finish.cs</DependentUpon>
     </EmbeddedResource>
@@ -199,33 +136,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UC\UC1\ValidatePin.resx">
       <DependentUpon>ValidatePin.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UC\UC2\Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UC\UC2\Success.resx">
-      <DependentUpon>Success.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UC\UC2\CustomWidthdraw.resx">
-      <DependentUpon>CustomWidthdraw.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UC\UC2\Fail.resx">
-      <DependentUpon>Fail.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UC\UC2\ReceiveBill.resx">
-      <DependentUpon>ReceiveBill.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UC\UC2\Widthdraw.resx">
-      <DependentUpon>Widthdraw.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UC\UC3\CashTransfer.resx">
-      <DependentUpon>CashTransfer.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UC\UC3\Fail1.resx">
-      <DependentUpon>Fail1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UC\UC3\Success1.resx">
-      <DependentUpon>Success1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UC\UC6\ChangePINFail.resx">
       <DependentUpon>ChangePINFail.cs</DependentUpon>
@@ -250,9 +160,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config">
-      <SubType>Designer</SubType>
-    </None>
+    <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\1_atm.jpg" />
@@ -384,6 +292,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\hello2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hello003.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hello004.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
