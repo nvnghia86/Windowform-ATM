@@ -1,0 +1,9 @@
+E:\Windowform-ATM\ATM\ATM\DAL\bin\Debug\DAL.dll
+E:\Windowform-ATM\ATM\ATM\DAL\bin\Debug\DAL.pdb
+E:\Windowform-ATM\ATM\ATM\DAL\bin\Debug\DTO.dll
+E:\Windowform-ATM\ATM\ATM\DAL\bin\Debug\DTO.pdb
+E:\Windowform-ATM\ATM\ATM\DAL\obj\Debug\DALs.csprojAssemblyReference.cache
+E:\Windowform-ATM\ATM\ATM\DAL\obj\Debug\DALs.csproj.CoreCompileInputs.cache
+E:\Windowform-ATM\ATM\ATM\DAL\obj\Debug\DALs.csproj.CopyComplete
+E:\Windowform-ATM\ATM\ATM\DAL\obj\Debug\DAL.dll
+E:\Windowform-ATM\ATM\ATM\DAL\obj\Debug\DAL.pdb

@@ -32,6 +32,8 @@
             this.lbErrorMoney = new System.Windows.Forms.Label();
             this.lbErrorCard = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lbErrorMoney
@@ -72,15 +74,41 @@
             this.label4.TabIndex = 9;
             this.label4.Text = "Giao dịch thất bại";
             // 
-            // Fail
+            // pictureBox2
+            // 
+            this.pictureBox2.AutoSize = true;
+            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pictureBox2.ForeColor = System.Drawing.Color.Firebrick;
+            this.pictureBox2.Location = new System.Drawing.Point(348, 269);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(212, 24);
+            this.pictureBox2.TabIndex = 10;
+            this.pictureBox2.Text = "TIẾP TỤC GIAO DỊCH";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.AutoSize = true;
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pictureBox1.ForeColor = System.Drawing.Color.Firebrick;
+            this.pictureBox1.Location = new System.Drawing.Point(398, 319);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(162, 24);
+            this.pictureBox1.TabIndex = 11;
+            this.pictureBox1.Text = "HỦY GIAO DỊCH";
+            // 
+            // Fail1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.lbErrorMoney);
             this.Controls.Add(this.lbErrorCard);
             this.Controls.Add(this.label4);
-            this.Name = "Fail";
+            this.Name = "Fail1";
             this.Size = new System.Drawing.Size(570, 360);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -92,5 +120,7 @@
         private System.Windows.Forms.Label lbErrorMoney;
         private System.Windows.Forms.Label lbErrorCard;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label pictureBox2;
+        private System.Windows.Forms.Label pictureBox1;
     }
 }
