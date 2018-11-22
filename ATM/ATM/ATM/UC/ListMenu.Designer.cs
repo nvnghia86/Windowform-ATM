@@ -103,7 +103,7 @@
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.BackgroundImage = global::ATM.Properties.Resources.GiaoDichKhac;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(370, 295);
+            this.pictureBox1.Location = new System.Drawing.Point(370, 308);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(200, 35);
             this.pictureBox1.TabIndex = 31;
@@ -114,7 +114,7 @@
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.BackgroundImage = global::ATM.Properties.Resources.DoiPin;
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox2.Location = new System.Drawing.Point(0, 157);
+            this.pictureBox2.Location = new System.Drawing.Point(0, 309);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(200, 35);
             this.pictureBox2.TabIndex = 31;
@@ -125,7 +125,7 @@
             this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox3.BackgroundImage = global::ATM.Properties.Resources.ThanhToanHoaDon;
             this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox3.Location = new System.Drawing.Point(0, 203);
+            this.pictureBox3.Location = new System.Drawing.Point(0, 257);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(200, 35);
             this.pictureBox3.TabIndex = 31;
@@ -136,7 +136,7 @@
             this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox4.BackgroundImage = global::ATM.Properties.Resources.InSaoKe;
             this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox4.Location = new System.Drawing.Point(370, 203);
+            this.pictureBox4.Location = new System.Drawing.Point(0, 208);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(200, 35);
             this.pictureBox4.TabIndex = 31;
@@ -147,7 +147,7 @@
             this.pictureBox5.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox5.BackgroundImage = global::ATM.Properties.Resources.VanTinTaiKhoan;
             this.pictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox5.Location = new System.Drawing.Point(370, 249);
+            this.pictureBox5.Location = new System.Drawing.Point(370, 210);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(200, 35);
             this.pictureBox5.TabIndex = 31;
@@ -169,7 +169,7 @@
             this.pictureBox7.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox7.BackgroundImage = global::ATM.Properties.Resources.ChuyenKhoan;
             this.pictureBox7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox7.Location = new System.Drawing.Point(0, 249);
+            this.pictureBox7.Location = new System.Drawing.Point(370, 257);
             this.pictureBox7.Name = "pictureBox7";
             this.pictureBox7.Size = new System.Drawing.Size(200, 35);
             this.pictureBox7.TabIndex = 31;
@@ -180,7 +180,7 @@
             this.pictureBox8.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox8.BackgroundImage = global::ATM.Properties.Resources.GuiTienTrucTuyen;
             this.pictureBox8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox8.Location = new System.Drawing.Point(0, 295);
+            this.pictureBox8.Location = new System.Drawing.Point(0, 157);
             this.pictureBox8.Name = "pictureBox8";
             this.pictureBox8.Size = new System.Drawing.Size(200, 35);
             this.pictureBox8.TabIndex = 31;
