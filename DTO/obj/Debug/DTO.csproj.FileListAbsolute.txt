@@ -1,5 +1,0 @@
-E:\Windowform-ATM\ATM\ATM\DTO\bin\Debug\DTO.dll
-E:\Windowform-ATM\ATM\ATM\DTO\bin\Debug\DTO.pdb
-E:\Windowform-ATM\ATM\ATM\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
-E:\Windowform-ATM\ATM\ATM\DTO\obj\Debug\DTO.dll
-E:\Windowform-ATM\ATM\ATM\DTO\obj\Debug\DTO.pdb
