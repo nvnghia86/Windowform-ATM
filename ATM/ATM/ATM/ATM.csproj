@@ -91,6 +91,12 @@
     <Compile Include="UC\UC1\ValidatePin.Designer.cs">
       <DependentUpon>ValidatePin.cs</DependentUpon>
     </Compile>
+    <Compile Include="UC\UC2\CheckBalance.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC\UC2\CheckBalance.Designer.cs">
+      <DependentUpon>CheckBalance.cs</DependentUpon>
+    </Compile>
     <Compile Include="UC\UC2\Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -199,6 +205,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UC\UC1\ValidatePin.resx">
       <DependentUpon>ValidatePin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC\UC2\CheckBalance.resx">
+      <DependentUpon>CheckBalance.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UC\UC2\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>

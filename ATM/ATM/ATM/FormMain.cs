@@ -27,6 +27,7 @@ namespace ATM
         private ConfigBUL configBUL = new ConfigBUL();
         private AccountBUL accountBUL = new AccountBUL();
         private StockBUL stockBUL = new StockBUL();
+        private LogDAL logDAL = new LogDAL();
 
         private int numberRecord;
         public formMain()
@@ -193,6 +194,10 @@ namespace ATM
             {
                 widthdrawSelectThree();
             }
+            if (state.Equals("menu"))
+            {
+                openStateCheckBalance();
+            }
 
         }
 
@@ -298,6 +303,10 @@ namespace ATM
             {
                 exitChangePIN();
             }
+            else if (state.Equals("checkBalance"))
+            {
+                exitChangePIN();
+            }
 
 
         }
@@ -353,6 +362,10 @@ namespace ATM
                 openSuccess();
             }
             else if (state.Equals("success2"))
+            {
+                exitValidatecard();
+            }
+            else if (state.Equals("checkBalance"))
             {
                 exitValidatecard();
             }
@@ -1198,7 +1211,8 @@ namespace ATM
         private void widthdrawSelectOne()
         {
             bool check = stockBUL.updateQuantity(500000);
-            if (check)
+            bool checkMoney = accountBUL.compareBalance(500000, lbCardNo.Text);
+            if (check && checkMoney)
             {
                 if (!panelMain.Controls.Contains(Success.Instance))
                 {
@@ -1227,6 +1241,7 @@ namespace ATM
                 {
                     Fail.Instance.BringToFront();
                 }
+                openFail();
                 state = "fail";
             }
         }
@@ -1251,7 +1266,9 @@ namespace ATM
         private void widthdrawSelectTwo()
         {
             bool check = stockBUL.updateQuantity(1000000);
-            if (check)
+            bool checkMoney = accountBUL.compareBalance(1000000, lbCardNo.Text);
+            
+            if (check && checkMoney)
             {
                 if (!panelMain.Controls.Contains(Success.Instance))
                 {
@@ -1279,7 +1296,9 @@ namespace ATM
                 else
                 {
                     Fail.Instance.BringToFront();
+
                 }
+                openFail();
                 state = "fail";
             }
         }
@@ -1288,7 +1307,8 @@ namespace ATM
         private void widthdrawSelectThree()
         {
             bool check = stockBUL.updateQuantity(2000000);
-            if (check)
+            bool checkMoney = accountBUL.compareBalance(2000000, lbCardNo.Text);
+            if (check && checkMoney)
             {
                 if (!panelMain.Controls.Contains(Success.Instance))
                 {
@@ -1317,6 +1337,7 @@ namespace ATM
                 {
                     Fail.Instance.BringToFront();
                 }
+                openFail();
                 state = "fail";
             }
         }
@@ -1325,7 +1346,8 @@ namespace ATM
         private void widthdrawSelectFour()
         {
             bool check = stockBUL.updateQuantity(5000000);
-            if (check)
+            bool checkMoney = accountBUL.compareBalance(5000000, lbCardNo.Text);
+            if (check && checkMoney)
             {
                 if (!panelMain.Controls.Contains(Success.Instance))
                 {
@@ -1354,6 +1376,7 @@ namespace ATM
                 {
                     Fail.Instance.BringToFront();
                 }
+                openFail();
                 state = "fail";
             }
         }
@@ -1372,6 +1395,36 @@ namespace ATM
             }
             state = "customWidthdraw";
             CustomWidthdraw.Instance.clearTextBoxCustom();
-        }   
+        }
+        private void openFail()
+        {
+            if (!panelMain.Controls.Contains(Fail.Instance))
+            {
+                panelMain.Controls.Add(Fail.Instance);
+                Fail.Instance.Dock = DockStyle.Fill;
+                Fail.Instance.BringToFront();
+            }
+            else
+            {
+                Fail.Instance.BringToFront();
+            }
+            state = "failmoney";
+        }
+        private void openStateCheckBalance()
+        {
+            if (!panelMain.Controls.Contains(CheckBalance.Instance))
+            {
+                panelMain.Controls.Add(CheckBalance.Instance);
+                CheckBalance.Instance.Dock = DockStyle.Fill;
+                CheckBalance.Instance.BringToFront();
+            }
+            else
+            {
+                CheckBalance.Instance.BringToFront();
+            }
+            state = "checkBalance";
+            CheckBalance.Instance.setLbBalance(accountBUL.getBalance(lbCardNo.Text));
+            createLog("logtype03", accountBUL.getBalanceInt(lbCardNo.Text), "", lbCardNo.Text, "atm01", "Check Balance");
+        }
     }
 }

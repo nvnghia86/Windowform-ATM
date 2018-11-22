@@ -10,33 +10,34 @@ using System.Windows.Forms;
 
 namespace ATM.UC.UC2
 {
-    public partial class Fail : UserControl
+    public partial class CheckBalance : UserControl
     {
-        private static Fail _instance;
-        public static Fail Instance
+        private static CheckBalance _instance;
+        public static CheckBalance Instance
         {
             get
             {
                 if (_instance == null)
                 {
-                    _instance = new Fail();
+                    _instance = new CheckBalance();
                 }
                 return _instance;
             }
         }
 
-        public Fail()
+        public CheckBalance()
         {
             InitializeComponent();
         }
 
-        public void showErrorMoney()
+        public Label getLbBalance()
         {
-            lbErrorMoney.Visible = true;
-            lbErrorMoney.Visible = false;
-            label1.Visible = true;
-            label1.Visible = false;
+            return lbBalance;
         }
 
+        public void setLbBalance(string balance)
+        {
+            lbBalance.Text = balance + " VND";
+        }
     }
 }

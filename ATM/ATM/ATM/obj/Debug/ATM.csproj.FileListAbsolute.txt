@@ -106,3 +106,4 @@ E:\Windowform-ATM\ATM\ATM\bin\Debug\DAL.pdb
 E:\Windowform-ATM\ATM\ATM\bin\Debug\DTO.pdb
 E:\Windowform-ATM\ATM\ATM\obj\Debug\ATM.csproj.CopyComplete
 E:\Windowform-ATM\ATM\ATM\ATM\obj\Debug\ATM.UC.UC2.Form1.resources
+E:\Windowform-ATM\ATM\ATM\ATM\obj\Debug\ATM.UC.UC2.CheckBalance.resources

@@ -41,5 +41,6 @@ namespace BUL
 
             return arrLogNew;
         }
+
     }
 }

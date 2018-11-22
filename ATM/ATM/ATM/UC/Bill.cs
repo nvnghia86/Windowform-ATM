@@ -22,7 +22,7 @@ namespace ATM
         {
             DateTime aDateTime = DateTime.Now;
             lbNgayGD.Text = aDateTime.ToString();
-
+            
         }
         
     }
