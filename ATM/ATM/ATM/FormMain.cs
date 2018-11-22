@@ -10,8 +10,8 @@ using System.Windows.Forms;
 using ATM.UC;
 using ATM.UC.UC6;
 using ATM.UC.UC1;
+using ATM.UC.UC3;
 using ATM.UC.UC2;
-
 using BUL;
 using DAL;
 
@@ -27,6 +27,7 @@ namespace ATM
         private ConfigBUL configBUL = new ConfigBUL();
         private AccountBUL accountBUL = new AccountBUL();
         private StockBUL stockBUL = new StockBUL();
+
         private int numberRecord;
         public formMain()
         {
@@ -74,6 +75,17 @@ namespace ATM
             {
                 changePIN();
             }
+            // state cash transfer card
+            else if (state.Equals("cashTransferCard"))
+            {
+                pressEnterCashTransferCard();
+            }
+            // state cash transfer money
+            else if (state.Equals("cashTransferMoney"))
+            {
+                pressEnterCashTransferMoney();
+            }
+
             else if (state.Equals("customWidthdraw"))
             {
                 pressEnterCustomWidthdraw();
@@ -102,6 +114,16 @@ namespace ATM
             {
                 NewPIN.Instance.clearTextBoxNewPIN();
             }
+            // state cash transfer card
+            else if (state.Equals("cashTransferCard"))
+            {
+                CashTransfer.Instance.clearTextBoxCardNoTo();
+            }
+            // state cash transfer money
+            else if (state.Equals("cashTransferMoney"))
+            {
+                CashTransfer.Instance.clearTextBoxMoneyTransfer();
+            }
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
@@ -127,10 +149,32 @@ namespace ATM
             {
                 exitListMenu();
             }
+
+            // state cash transfer card
+            else if (state.Equals("cashTransferCard"))
+            {
+                exitCashTransferCard();
+            }
+            // state cash transfer money
+            else if (state.Equals("cashTransferMoney"))
+            {
+                exitCashTransferMoney();
+            }
+            // state cash transfer money
+            else if (state.Equals("success"))
+            {
+                exitSuccessCashTransfer();
+            }
+            // state cash transfer money
+            else if (state.Equals("fail"))
+            {
+                exitFailCashTransfer();
+            }
             // state widthdraw
             else if (state.Equals("widthdraw"))
             {
                 exitWidthdraw();
+
             }
 
         }
@@ -215,6 +259,22 @@ namespace ATM
             {
                 exitChangePIN();
             }
+            // state cash transfer
+            else if (state.Equals("menu"))
+            {
+                openStateCashTransfer();
+            }
+            // state cash transfer card
+            else if (state.Equals("cashTransferCard"))
+            {
+                checkCardStateCashTransfer();
+            }
+            // state cash transfer money
+            else if (state.Equals("cashTransferMoney"))
+            {
+                processCashTransfer();
+            }
+         
             else if (state.Equals("widthdraw"))
             {
                 openStateCustomWidthdraw();
@@ -231,6 +291,7 @@ namespace ATM
             {
                 pressEnterCustomWidthdraw();
             }
+
 
         }
 
@@ -257,6 +318,17 @@ namespace ATM
             {
                 exit();
             }
+
+            // state cash transfer card
+            else if (state.Equals("cashTransferCard"))
+            {
+                exitCashTransferCard();
+            }
+            // state cash transfer money
+            else if (state.Equals("cashTransferMoney"))
+            {
+                exitCashTransferMoney();
+            }
             else if(state.Equals("customWidthdraw"))
             {
                 exitValidatecard();
@@ -271,6 +343,7 @@ namespace ATM
             }
 
         } 
+
         #endregion
 
         #region Key_click
@@ -283,6 +356,8 @@ namespace ATM
             else if (state.Equals("oldPIN"))
                 enterTextBox("1");
             else if (state.Equals("newPIN"))
+                enterTextBox("1");
+            else if (state.Equals("cashTransferCard"))
                 enterTextBox("1");
             else if (state.Equals("customWidthdraw"))
                 enterTextBox("1");
@@ -298,6 +373,10 @@ namespace ATM
                 enterTextBox("2");
             else if (state.Equals("newPIN"))
                 enterTextBox("2");
+            else if (state.Equals("cashTransferCard"))
+                enterTextBox("2");
+            else if (state.Equals("cashTransferMoney"))
+                enterTextBox("2");
             else if (state.Equals("customWidthdraw"))
                 enterTextBox("2");
         }
@@ -312,7 +391,13 @@ namespace ATM
                 enterTextBox("3");
             else if (state.Equals("newPIN"))
                 enterTextBox("3");
+
+            else if (state.Equals("cashTransferCard"))
+                enterTextBox("3");
+            else if (state.Equals("cashTransferMoney"))
+                enterTextBox("3");
             else if (state.Equals("customWidthdraw"))
+
                 enterTextBox("3");
         }
 
@@ -326,7 +411,12 @@ namespace ATM
                 enterTextBox("4");
             else if (state.Equals("newPIN"))
                 enterTextBox("4");
+            else if (state.Equals("cashTransferCard"))
+                enterTextBox("4");
+            else if (state.Equals("cashTransferMoney"))
+                enterTextBox("4");
             else if (state.Equals("customWidthdraw"))
+
                 enterTextBox("4");
         }
 
@@ -340,7 +430,12 @@ namespace ATM
                 enterTextBox("5");
             else if (state.Equals("newPIN"))
                 enterTextBox("5");
+            else if (state.Equals("cashTransferCard"))
+                enterTextBox("5");
+            else if (state.Equals("cashTransferMoney"))
+                enterTextBox("5");
             else if (state.Equals("customWidthdraw"))
+
                 enterTextBox("5");
         }
 
@@ -354,7 +449,12 @@ namespace ATM
                 enterTextBox("6");
             else if (state.Equals("newPIN"))
                 enterTextBox("6");
+            else if (state.Equals("cashTransferCard"))
+                enterTextBox("6");
+            else if (state.Equals("cashTransferMoney"))
+                enterTextBox("6");
             else if (state.Equals("customWidthdraw"))
+
                 enterTextBox("6");
         }
 
@@ -368,7 +468,13 @@ namespace ATM
                 enterTextBox("7");
             else if (state.Equals("newPIN"))
                 enterTextBox("7");
+
+            else if (state.Equals("cashTransferCard"))
+                enterTextBox("7");
+            else if (state.Equals("cashTransferMoney"))
+                enterTextBox("7");
             else if (state.Equals("customWidthdraw"))
+
                 enterTextBox("7");
         }
 
@@ -382,7 +488,13 @@ namespace ATM
                 enterTextBox("8");
             else if (state.Equals("newPIN"))
                 enterTextBox("8");
+
+            else if (state.Equals("cashTransferCard"))
+                enterTextBox("8");
+            else if (state.Equals("cashTransferMoney"))
+                enterTextBox("8");
             else if (state.Equals("customWidthdraw"))
+
                 enterTextBox("8");
         }
 
@@ -396,7 +508,13 @@ namespace ATM
                 enterTextBox("9");
             else if (state.Equals("newPIN"))
                 enterTextBox("9");
+
+            else if (state.Equals("cashTransferCard"))
+                enterTextBox("9");
+            else if (state.Equals("cashTransferMoney"))
+                enterTextBox("9");
             else if (state.Equals("customWidthdraw"))
+
                 enterTextBox("9");
         }
 
@@ -410,7 +528,13 @@ namespace ATM
                 enterTextBox("0");
             else if (state.Equals("newPIN"))
                 enterTextBox("0");
+
+            else if (state.Equals("cashTransferCard"))
+                enterTextBox("0");
+            else if (state.Equals("cashTransferMoney"))
+                enterTextBox("0");
             else if (state.Equals("customWidthdraw"))
+
                 enterTextBox("0");
         } 
         #endregion
@@ -437,10 +561,20 @@ namespace ATM
             {
                 NewPIN.Instance.setTextBoxNewPIN(str);
             }
-            else if (state.Equals("customWidthdraw"))
 
+            //state cash transfer
+            else if (state.Equals("cashTransferCard"))
+            {
+                CashTransfer.Instance.setTextBoxCardNoTo(str);
+            }
+            else if (state.Equals("cashTransferMoney"))
+            {
+                CashTransfer.Instance.setTextBoxMoneyTransfer(str);
+            }
+            else if (state.Equals("customWidthdraw"))
             {
                 CustomWidthdraw.Instance.setTextBoxCustom(str);
+
             }
         }
         //////////////////////////////////SV1: Nguyễn Đức Mạnh
@@ -676,7 +810,261 @@ namespace ATM
             }
             state = "finish";
         }
-        
+        //Ngô Minh Thắng
+        // switch from control list service to control cash transfer
+        private void openStateCashTransfer()
+        {
+            if (!panelMain.Controls.Contains(CashTransfer.Instance))
+            {
+                panelMain.Controls.Add(CashTransfer.Instance);
+                CashTransfer.Instance.Dock = DockStyle.Fill;
+                CashTransfer.Instance.BringToFront();
+            }
+            else
+            {
+                CashTransfer.Instance.BringToFront();
+            }
+            CashTransfer.Instance.refesh();
+            state = "cashTransferCard";
+        }
+
+        // check card to cash transfer
+        private void checkCardStateCashTransfer()
+        {
+            bool checkCardTo = carcBUL.checkCardNo(CashTransfer.Instance.getTextBoxCardNoTo());
+            if (!checkCardTo)
+            {
+                if (!panelMain.Controls.Contains(Fail1.Instance))
+                {
+                    panelMain.Controls.Add(Fail1.Instance);
+                    Fail1.Instance.Dock = DockStyle.Fill;
+                    Fail1.Instance.BringToFront();
+                }
+                else
+                {
+                    Fail1.Instance.BringToFront();
+                }
+                Fail1.Instance.showErrorCard();
+                state = "fail";
+            }
+            else
+            {
+                CashTransfer.Instance.hideCardShowMoney();
+                state = "cashTransferMoney";
+            }
+        }
+
+        // excute cash transfer
+        private void processCashTransfer()
+        {
+            if (CashTransfer.Instance.getTextBoxMoneyTransfer().Equals(""))
+            {
+                return;
+            }
+            bool checkMoney = accountBUL.compareBalance(Convert.ToInt32(CashTransfer.Instance.getTextBoxMoneyTransfer()), lbCardNo.Text);
+
+            if (!checkMoney)
+            {
+                if (!panelMain.Controls.Contains(Fail1.Instance))
+                {
+                    panelMain.Controls.Add(Fail1.Instance);
+                    Fail1.Instance.Dock = DockStyle.Fill;
+                    Fail1.Instance.BringToFront();
+                }
+                else
+                {
+                    Fail1.Instance.BringToFront();
+                }
+                Fail1.Instance.showErrorMoney();
+                state = "fail";
+            }
+            else
+            {
+                bool checkSuccess = accountBUL.updateBalance(Convert.ToInt32(CashTransfer.Instance.getTextBoxMoneyTransfer())
+                    , lbCardNo.Text, CashTransfer.Instance.getTextBoxCardNoTo());
+                if (!checkSuccess)
+                {
+                    if (!panelMain.Controls.Contains(Fail1.Instance))
+                    {
+                        panelMain.Controls.Add(Fail1.Instance);
+                        Fail1.Instance.Dock = DockStyle.Fill;
+                        Fail1.Instance.BringToFront();
+                    }
+                    else
+                    {
+                        Fail1.Instance.BringToFront();
+                    }
+                    state = "fail";
+                }
+                else
+                {
+                    if (!panelMain.Controls.Contains(Success1.Instance))
+                    {
+                        panelMain.Controls.Add(Success1.Instance);
+                        Success1.Instance.Dock = DockStyle.Fill;
+                        Success1.Instance.BringToFront();
+                    }
+                    else
+                    {
+                        Success1.Instance.BringToFront();
+                    }
+                    state = "success";
+                    createLog("logtype02", Convert.ToInt32(CashTransfer.Instance.getTextBoxMoneyTransfer()), CashTransfer.Instance.getTextBoxCardNoTo(), lbCardNo.Text, "atm01", "Thành công");
+                }
+            }
+        }
+        //
+        // back to state list service from state cash transfer
+        private void exitCashTransferCard()
+        {
+            if (!panelMain.Controls.Contains(ListMenu.Instance))
+            {
+                panelMain.Controls.Add(ListMenu.Instance);
+                ListMenu.Instance.Dock = DockStyle.Fill;
+                ListMenu.Instance.BringToFront();
+            }
+            else
+            {
+                ListMenu.Instance.BringToFront();
+            }
+            state = "menu";
+        }
+
+        // back to state list service from state cash transfer
+        private void exitCashTransferMoney()
+        {
+            if (!panelMain.Controls.Contains(ListMenu.Instance))
+            {
+                panelMain.Controls.Add(ListMenu.Instance);
+                ListMenu.Instance.Dock = DockStyle.Fill;
+                ListMenu.Instance.BringToFront();
+            }
+            else
+            {
+                ListMenu.Instance.BringToFront();
+            }
+            state = "menu";
+        }
+
+        // back to state list service from state cash transfer success
+        private void exitSuccessCashTransfer()
+        {
+            if (!panelMain.Controls.Contains(ListMenu.Instance))
+            {
+                panelMain.Controls.Add(ListMenu.Instance);
+                ListMenu.Instance.Dock = DockStyle.Fill;
+                ListMenu.Instance.BringToFront();
+            }
+            else
+            {
+                ListMenu.Instance.BringToFront();
+            }
+            state = "menu";
+        }
+
+        // back to state list service from state cash transfer fail
+        private void exitFailCashTransfer()
+        {
+            if (!panelMain.Controls.Contains(ListMenu.Instance))
+            {
+                panelMain.Controls.Add(ListMenu.Instance);
+                ListMenu.Instance.Dock = DockStyle.Fill;
+                ListMenu.Instance.BringToFront();
+            }
+            else
+            {
+                ListMenu.Instance.BringToFront();
+            }
+            state = "menu";
+        }
+        // press ENTER in state cash transfer card
+        private void pressEnterCashTransferCard()
+        {
+            bool checkCardTo = carcBUL.checkCardNo(CashTransfer.Instance.getTextBoxCardNoTo());
+            if (!checkCardTo)
+            {
+                if (!panelMain.Controls.Contains(Fail1.Instance))
+                {
+                    panelMain.Controls.Add(Fail1.Instance);
+                    Fail1.Instance.Dock = DockStyle.Fill;
+                    Fail1.Instance.BringToFront();
+                }
+                else
+                {
+                    Fail1.Instance.BringToFront();
+                }
+                Fail1.Instance.showErrorCard();
+                state = "fail";
+            }
+            else
+            {
+                CashTransfer.Instance.hideCardShowMoney();
+                state = "cashTransferMoney";
+            }
+        }
+
+        // press ENTER in state cash transfer money
+        private void pressEnterCashTransferMoney()
+        {
+            if (CashTransfer.Instance.getTextBoxMoneyTransfer().Equals(""))
+            {
+                return;
+            }
+            bool checkMoney = accountBUL.compareBalance(Convert.ToInt32(CashTransfer.Instance.getTextBoxMoneyTransfer()), lbCardNo.Text);
+
+            if (!checkMoney)
+            {
+                if (!panelMain.Controls.Contains(Fail1.Instance))
+                {
+                    panelMain.Controls.Add(Fail1.Instance);
+                    Fail1.Instance.Dock = DockStyle.Fill;
+                    Fail1.Instance.BringToFront();
+                }
+                else
+                {
+                    Fail1.Instance.BringToFront();
+                }
+                Fail1.Instance.showErrorMoney();
+                state = "fail";
+            }
+            else
+            {
+                bool checkSuccess = accountBUL.updateBalance(Convert.ToInt32(CashTransfer.Instance.getTextBoxMoneyTransfer())
+                    , lbCardNo.Text, CashTransfer.Instance.getTextBoxCardNoTo());
+                if (!checkSuccess)
+                {
+                    if (!panelMain.Controls.Contains(Fail1.Instance))
+                    {
+                        panelMain.Controls.Add(Fail1.Instance);
+                        Fail1.Instance.Dock = DockStyle.Fill;
+                        Fail1.Instance.BringToFront();
+                    }
+                    else
+                    {
+                        Fail1.Instance.BringToFront();
+                    }
+                    state = "fail";
+                }
+                else
+                {
+                    if (!panelMain.Controls.Contains(Success1.Instance))
+                    {
+                        panelMain.Controls.Add(Success1.Instance);
+                        Success1.Instance.Dock = DockStyle.Fill;
+                        Success1.Instance.BringToFront();
+                    }
+                    else
+                    {
+                        Success1.Instance.BringToFront();
+                    }
+                    state = "success";
+                    createLog("logtype02", Convert.ToInt32(CashTransfer.Instance.getTextBoxMoneyTransfer())
+                        , CashTransfer.Instance.getTextBoxCardNoTo(), lbCardNo.Text, "atm01", "Thành công");
+                }
+            }
+        }
+        //
+
 
         // back to state validate card from state list service
         private void exitListMenu()
@@ -729,15 +1117,15 @@ namespace ATM
             bool check = stockBUL.updateQuantity(Convert.ToInt32(CustomWidthdraw.Instance.getTextBoxCustom()));
             if (check)
             {
-                if (!panelMain.Controls.Contains(Success.Instance))
+                if (!panelMain.Controls.Contains(Success1.Instance))
                 {
-                    panelMain.Controls.Add(Success.Instance);
-                    Success.Instance.Dock = DockStyle.Fill;
-                    Success.Instance.BringToFront();
+                    panelMain.Controls.Add(Success1.Instance);
+                    Success1.Instance.Dock = DockStyle.Fill;
+                    Success1.Instance.BringToFront();
                 }
                 else
                 {
-                    Success.Instance.BringToFront();
+                    Success1.Instance.BringToFront();
                 }
                 state = "success";
                 createLog("logtype01", Convert.ToInt32(CustomWidthdraw.Instance.getTextBoxCustom()), "", lbCardNo.Text, "atm01", "Thành công");
@@ -745,15 +1133,15 @@ namespace ATM
             }
             else
             {
-                if (!panelMain.Controls.Contains(Fail.Instance))
+                if (!panelMain.Controls.Contains(Fail1.Instance))
                 {
-                    panelMain.Controls.Add(Fail.Instance);
-                    Fail.Instance.Dock = DockStyle.Fill;
-                    Fail.Instance.BringToFront();
+                    panelMain.Controls.Add(Fail1.Instance);
+                    Fail1.Instance.Dock = DockStyle.Fill;
+                    Fail1.Instance.BringToFront();
                 }
                 else
                 {
-                    Fail.Instance.BringToFront();
+                    Fail1.Instance.BringToFront();
                 }
                 state = "fail";
             }
@@ -764,15 +1152,15 @@ namespace ATM
             bool check = stockBUL.updateQuantity(500000);
             if (check)
             {
-                if (!panelMain.Controls.Contains(Success.Instance))
+                if (!panelMain.Controls.Contains(Success1.Instance))
                 {
-                    panelMain.Controls.Add(Success.Instance);
-                    Success.Instance.Dock = DockStyle.Fill;
-                    Success.Instance.BringToFront();
+                    panelMain.Controls.Add(Success1.Instance);
+                    Success1.Instance.Dock = DockStyle.Fill;
+                    Success1.Instance.BringToFront();
                 }
                 else
                 {
-                    Success.Instance.BringToFront();
+                    Success1.Instance.BringToFront();
                 }
                 state = "success";
                 createLog("logtype01", 500000, "", lbCardNo.Text, "atm01", "Thành công");
@@ -780,15 +1168,15 @@ namespace ATM
             }
             else
             {
-                if (!panelMain.Controls.Contains(Fail.Instance))
+                if (!panelMain.Controls.Contains(Fail1.Instance))
                 {
-                    panelMain.Controls.Add(Fail.Instance);
-                    Fail.Instance.Dock = DockStyle.Fill;
-                    Fail.Instance.BringToFront();
+                    panelMain.Controls.Add(Fail1.Instance);
+                    Fail1.Instance.Dock = DockStyle.Fill;
+                    Fail1.Instance.BringToFront();
                 }
                 else
                 {
-                    Fail.Instance.BringToFront();
+                    Fail1.Instance.BringToFront();
                 }
                 state = "fail";
             }
@@ -816,15 +1204,15 @@ namespace ATM
             bool check = stockBUL.updateQuantity(1000000);
             if (check)
             {
-                if (!panelMain.Controls.Contains(Success.Instance))
+                if (!panelMain.Controls.Contains(Success1.Instance))
                 {
-                    panelMain.Controls.Add(Success.Instance);
-                    Success.Instance.Dock = DockStyle.Fill;
-                    Success.Instance.BringToFront();
+                    panelMain.Controls.Add(Success1.Instance);
+                    Success1.Instance.Dock = DockStyle.Fill;
+                    Success1.Instance.BringToFront();
                 }
                 else
                 {
-                    Success.Instance.BringToFront();
+                    Success1.Instance.BringToFront();
                 }
                 state = "success";
                 createLog("logtype01", 1000000, "", lbCardNo.Text, "atm01", "Thành công");
@@ -832,15 +1220,15 @@ namespace ATM
             }
             else
             {
-                if (!panelMain.Controls.Contains(Fail.Instance))
+                if (!panelMain.Controls.Contains(Fail1.Instance))
                 {
-                    panelMain.Controls.Add(Fail.Instance);
-                    Fail.Instance.Dock = DockStyle.Fill;
-                    Fail.Instance.BringToFront();
+                    panelMain.Controls.Add(Fail1.Instance);
+                    Fail1.Instance.Dock = DockStyle.Fill;
+                    Fail1.Instance.BringToFront();
                 }
                 else
                 {
-                    Fail.Instance.BringToFront();
+                    Fail1.Instance.BringToFront();
                 }
                 state = "fail";
             }
@@ -852,15 +1240,15 @@ namespace ATM
             bool check = stockBUL.updateQuantity(2000000);
             if (check)
             {
-                if (!panelMain.Controls.Contains(Success.Instance))
+                if (!panelMain.Controls.Contains(Success1.Instance))
                 {
-                    panelMain.Controls.Add(Success.Instance);
-                    Success.Instance.Dock = DockStyle.Fill;
-                    Success.Instance.BringToFront();
+                    panelMain.Controls.Add(Success1.Instance);
+                    Success1.Instance.Dock = DockStyle.Fill;
+                    Success1.Instance.BringToFront();
                 }
                 else
                 {
-                    Success.Instance.BringToFront();
+                    Success1.Instance.BringToFront();
                 }
                 state = "success";
                 createLog("logtype01", 2000000, "", lbCardNo.Text, "atm01", "Thành công");
@@ -868,15 +1256,15 @@ namespace ATM
             }
             else
             {
-                if (!panelMain.Controls.Contains(Fail.Instance))
+                if (!panelMain.Controls.Contains(Fail1.Instance))
                 {
-                    panelMain.Controls.Add(Fail.Instance);
-                    Fail.Instance.Dock = DockStyle.Fill;
-                    Fail.Instance.BringToFront();
+                    panelMain.Controls.Add(Fail1.Instance);
+                    Fail1.Instance.Dock = DockStyle.Fill;
+                    Fail1.Instance.BringToFront();
                 }
                 else
                 {
-                    Fail.Instance.BringToFront();
+                    Fail1.Instance.BringToFront();
                 }
                 state = "fail";
             }
@@ -888,15 +1276,15 @@ namespace ATM
             bool check = stockBUL.updateQuantity(5000000);
             if (check)
             {
-                if (!panelMain.Controls.Contains(Success.Instance))
+                if (!panelMain.Controls.Contains(Success1.Instance))
                 {
-                    panelMain.Controls.Add(Success.Instance);
-                    Success.Instance.Dock = DockStyle.Fill;
-                    Success.Instance.BringToFront();
+                    panelMain.Controls.Add(Success1.Instance);
+                    Success1.Instance.Dock = DockStyle.Fill;
+                    Success1.Instance.BringToFront();
                 }
                 else
                 {
-                    Success.Instance.BringToFront();
+                    Success1.Instance.BringToFront();
                 }
                 state = "success";
                 createLog("logtype01", 5000000, "", lbCardNo.Text, "atm01", "Thành công");
@@ -904,15 +1292,15 @@ namespace ATM
             }
             else
             {
-                if (!panelMain.Controls.Contains(Fail.Instance))
+                if (!panelMain.Controls.Contains(Fail1.Instance))
                 {
-                    panelMain.Controls.Add(Fail.Instance);
-                    Fail.Instance.Dock = DockStyle.Fill;
-                    Fail.Instance.BringToFront();
+                    panelMain.Controls.Add(Fail1.Instance);
+                    Fail1.Instance.Dock = DockStyle.Fill;
+                    Fail1.Instance.BringToFront();
                 }
                 else
                 {
-                    Fail.Instance.BringToFront();
+                    Fail1.Instance.BringToFront();
                 }
                 state = "fail";
             }

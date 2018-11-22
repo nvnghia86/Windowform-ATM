@@ -121,6 +121,24 @@
     <Compile Include="UC\UC2\Widthdraw.Designer.cs">
       <DependentUpon>Widthdraw.cs</DependentUpon>
     </Compile>
+    <Compile Include="UC\UC3\CashTransfer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC\UC3\CashTransfer.Designer.cs">
+      <DependentUpon>CashTransfer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC\UC3\Fail1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC\UC3\Fail1.Designer.cs">
+      <DependentUpon>Fail1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC\UC3\Success1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC\UC3\Success1.Designer.cs">
+      <DependentUpon>Success1.cs</DependentUpon>
+    </Compile>
     <Compile Include="UC\UC6\ChangePINFail.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -191,6 +209,15 @@
     <EmbeddedResource Include="UC\UC2\Widthdraw.resx">
       <DependentUpon>Widthdraw.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UC\UC3\CashTransfer.resx">
+      <DependentUpon>CashTransfer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC\UC3\Fail1.resx">
+      <DependentUpon>Fail1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC\UC3\Success1.resx">
+      <DependentUpon>Success1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UC\UC6\ChangePINFail.resx">
       <DependentUpon>ChangePINFail.cs</DependentUpon>
     </EmbeddedResource>
@@ -214,7 +241,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\1_atm.jpg" />
