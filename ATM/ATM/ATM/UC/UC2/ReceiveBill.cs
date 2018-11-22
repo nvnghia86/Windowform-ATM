@@ -27,6 +27,7 @@ namespace ATM.UC.UC2
         public ReceiveBill()
         {
             InitializeComponent();
+
         }
 
         

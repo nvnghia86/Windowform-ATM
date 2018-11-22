@@ -33,5 +33,7 @@ namespace ATM.UC
         {
             lblHello.Text = name;
         }
+
+        
     }
 }
