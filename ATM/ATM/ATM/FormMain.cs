@@ -270,7 +270,10 @@ namespace ATM
                 checkCardStateCashTransfer();
             }
             // state cash transfer money
-
+            else if (state.Equals("cashTransferMoney"))
+            {
+                processCashTransfer();
+            }
 
             else if (state.Equals("widthdraw"))
             {
