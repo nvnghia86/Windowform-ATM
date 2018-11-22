@@ -133,7 +133,7 @@ namespace ATM
             {
                 exitValidatecard();
             }
-            else if(state.Equals("validatePin"))
+            else if (state.Equals("validatePin"))
             {
                 exitValidatecard();
             }
@@ -184,7 +184,7 @@ namespace ATM
             {
                 widthdrawSelectOne();
             }
-            
+
         }
 
         private void btnLeft2_Click(object sender, EventArgs e)
@@ -206,7 +206,7 @@ namespace ATM
             if (state.Equals("menu"))
             {
                 openStateOldPIN();
-            }         
+            }
         }
 
         private void btnRight1_Click(object sender, EventArgs e)
@@ -249,13 +249,13 @@ namespace ATM
             else if (state.Equals("oldPIN"))
             {
                 checkOldPIN();
-                    
+
             }
             else if (state.Equals("newPIN"))
             {
                 changePIN();
             }
-            else if(state.Equals("changePINSuccess"))
+            else if (state.Equals("changePINSuccess"))
             {
                 exitChangePIN();
             }
@@ -270,8 +270,8 @@ namespace ATM
                 checkCardStateCashTransfer();
             }
             // state cash transfer money
-            
-         
+
+
             else if (state.Equals("widthdraw"))
             {
                 openStateCustomWidthdraw();
@@ -313,13 +313,13 @@ namespace ATM
             {
                 exitValidatePIN();
             }
-            else if (state.Equals("oldPIN") || state.Equals("newPIN") || state.Equals("changePINFail") )
+            else if (state.Equals("oldPIN") || state.Equals("newPIN") || state.Equals("changePINFail"))
             {
                 exitChangePIN();
                 OldPIN.Instance.clearTextBoxPIN();
                 NewPIN.Instance.clearTextBoxNewPIN();
             }
-            else if(state.Equals("changePINSuccess"))
+            else if (state.Equals("changePINSuccess"))
             {
                 exit();
             }
@@ -334,7 +334,7 @@ namespace ATM
             {
                 exitCashTransferMoney();
             }
-            else if(state.Equals("customWidthdraw"))
+            else if (state.Equals("customWidthdraw"))
             {
                 exitValidatecard();
             }
@@ -355,7 +355,7 @@ namespace ATM
                 exitValidatecard();
             }
 
-        } 
+        }
 
         #endregion
 
@@ -551,7 +551,7 @@ namespace ATM
             else if (state.Equals("customWidthdraw"))
 
                 enterTextBox("0");
-        } 
+        }
         #endregion
 
         //////////////////////////////////SV1: Nguyễn Đức Mạnh
@@ -768,7 +768,7 @@ namespace ATM
             }
             state = "oldPIN";
         }
-        
+
 
 
         // back to state validate card from state validate pin
@@ -812,7 +812,7 @@ namespace ATM
         }
         private void exit()
         {
-           
+
             if (!panelMain.Controls.Contains(Finish.Instance))
             {
                 panelMain.Controls.Add(Finish.Instance);
@@ -1110,7 +1110,7 @@ namespace ATM
 
         }
         // Nguyen Van Nghia
-        
+
         private void openReceiveBill()
         {
             if (!panelMain.Controls.Contains(ReceiveBill.Instance))
@@ -1245,7 +1245,7 @@ namespace ATM
             }
             state = "widthdraw";
         }
-
+        private void openStateA() { }
         // select widthdraw 1.000.000
         private void widthdrawSelectTwo()
         {
@@ -1319,7 +1319,7 @@ namespace ATM
                 state = "fail";
             }
         }
-
+        
         // select widthdraw 5.000.000
         private void widthdrawSelectFour()
         {
