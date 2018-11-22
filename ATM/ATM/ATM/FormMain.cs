@@ -372,6 +372,8 @@ namespace ATM
                 enterTextBox("1");
             else if (state.Equals("cashTransferCard"))
                 enterTextBox("1");
+            else if (state.Equals("cashTransferMoney"))
+                enterTextBox("1");
             else if (state.Equals("customWidthdraw"))
                 enterTextBox("1");
         }
