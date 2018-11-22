@@ -46,7 +46,7 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.Control;
+            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label1.Location = new System.Drawing.Point(52, 231);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(444, 29);
@@ -57,11 +57,11 @@
             // 
             this.pictureBox2.AutoSize = true;
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pictureBox2.ForeColor = System.Drawing.Color.Maroon;
-            this.pictureBox2.Location = new System.Drawing.Point(466, 270);
+            this.pictureBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pictureBox2.ForeColor = System.Drawing.Color.Firebrick;
+            this.pictureBox2.Location = new System.Drawing.Point(476, 276);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(101, 25);
+            this.pictureBox2.Size = new System.Drawing.Size(89, 24);
             this.pictureBox2.TabIndex = 4;
             this.pictureBox2.Text = "ĐỒNG Ý";
             // 
@@ -69,11 +69,11 @@
             // 
             this.pictureBox1.AutoSize = true;
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pictureBox1.ForeColor = System.Drawing.Color.Maroon;
-            this.pictureBox1.Location = new System.Drawing.Point(466, 318);
+            this.pictureBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pictureBox1.ForeColor = System.Drawing.Color.Firebrick;
+            this.pictureBox1.Location = new System.Drawing.Point(476, 323);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(99, 25);
+            this.pictureBox1.Size = new System.Drawing.Size(87, 24);
             this.pictureBox1.TabIndex = 5;
             this.pictureBox1.Text = "HỦY BỎ";
             // 
@@ -93,7 +93,7 @@
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.Control;
+            this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label2.Location = new System.Drawing.Point(55, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(342, 29);
