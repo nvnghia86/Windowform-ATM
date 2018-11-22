@@ -9,3 +9,14 @@ E:\Windowform-ATM\ATM\ATM\BUL\obj\Debug\BULs.csproj.CoreCompileInputs.cache
 E:\Windowform-ATM\ATM\ATM\BUL\obj\Debug\BULs.csproj.CopyComplete
 E:\Windowform-ATM\ATM\ATM\BUL\obj\Debug\BUL.dll
 E:\Windowform-ATM\ATM\ATM\BUL\obj\Debug\BUL.pdb
+E:\WF\Windowform-ATM\ATM\ATM\BUL\bin\Debug\BUL.dll
+E:\WF\Windowform-ATM\ATM\ATM\BUL\bin\Debug\BUL.pdb
+E:\WF\Windowform-ATM\ATM\ATM\BUL\bin\Debug\DAL.dll
+E:\WF\Windowform-ATM\ATM\ATM\BUL\bin\Debug\DTO.dll
+E:\WF\Windowform-ATM\ATM\ATM\BUL\bin\Debug\DAL.pdb
+E:\WF\Windowform-ATM\ATM\ATM\BUL\bin\Debug\DTO.pdb
+E:\WF\Windowform-ATM\ATM\ATM\BUL\obj\Debug\BULs.csprojAssemblyReference.cache
+E:\WF\Windowform-ATM\ATM\ATM\BUL\obj\Debug\BULs.csproj.CoreCompileInputs.cache
+E:\WF\Windowform-ATM\ATM\ATM\BUL\obj\Debug\BULs.csproj.CopyComplete
+E:\WF\Windowform-ATM\ATM\ATM\BUL\obj\Debug\BUL.dll
+E:\WF\Windowform-ATM\ATM\ATM\BUL\obj\Debug\BUL.pdb

@@ -103,9 +103,5 @@ namespace BUL
             }
             return false;
         }
-
-
-
-
     }
 }
