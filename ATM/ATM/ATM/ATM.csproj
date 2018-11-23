@@ -53,10 +53,10 @@
     <Compile Include="FormMain.Designer.cs">
       <DependentUpon>FormMain.cs</DependentUpon>
     </Compile>
-    <Compile Include="UC\Bill.cs">
+    <Compile Include="UC\UC2\Bill.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UC\Bill.Designer.cs">
+    <Compile Include="UC\UC2\Bill.Designer.cs">
       <DependentUpon>Bill.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
@@ -178,7 +178,7 @@
     <EmbeddedResource Include="FormMain.resx">
       <DependentUpon>FormMain.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UC\Bill.resx">
+    <EmbeddedResource Include="UC\UC2\Bill.resx">
       <DependentUpon>Bill.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">

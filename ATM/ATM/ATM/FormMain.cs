@@ -1175,7 +1175,8 @@ namespace ATM
         private void pressEnterCustomWidthdraw()
         {
             bool check = stockBUL.updateQuantity(Convert.ToInt32(CustomWidthdraw.Instance.getTextBoxCustom()));
-            if (check)
+            bool checkMoney = accountBUL.compareBalance(Convert.ToInt32(CustomWidthdraw.Instance.getTextBoxCustom()), lbCardNo.Text);
+            if (check && checkMoney)
             {
                 if (!panelMain.Controls.Contains(Success.Instance))
                 {
@@ -1211,8 +1212,9 @@ namespace ATM
         private void widthdrawSelectOne()
         {
             bool check = stockBUL.updateQuantity(500000);
+            
             bool checkMoney = accountBUL.compareBalance(500000, lbCardNo.Text);
-            if (check && checkMoney)
+            if (check && checkMoney )
             {
                 if (!panelMain.Controls.Contains(Success.Instance))
                 {
@@ -1423,6 +1425,8 @@ namespace ATM
                 CheckBalance.Instance.BringToFront();
             }
             state = "checkBalance";
+            
+            
             CheckBalance.Instance.setLbBalance(accountBUL.getBalance(lbCardNo.Text));
             createLog("logtype03", accountBUL.getBalanceInt(lbCardNo.Text), "", lbCardNo.Text, "atm01", "Check Balance");
         }
