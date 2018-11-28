@@ -33,6 +33,7 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.lbErrorMoney = new System.Windows.Forms.Label();
             this.lbErrorWidth = new System.Windows.Forms.Label();
+            this.lbLimit = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -53,7 +54,7 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(139, 186);
+            this.label1.Location = new System.Drawing.Point(137, 131);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(332, 20);
             this.label1.TabIndex = 1;
@@ -76,28 +77,41 @@
             this.lbErrorMoney.AutoSize = true;
             this.lbErrorMoney.BackColor = System.Drawing.Color.Transparent;
             this.lbErrorMoney.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbErrorMoney.Location = new System.Drawing.Point(153, 121);
+            this.lbErrorMoney.Location = new System.Drawing.Point(153, 101);
             this.lbErrorMoney.Name = "lbErrorMoney";
             this.lbErrorMoney.Size = new System.Drawing.Size(287, 20);
             this.lbErrorMoney.TabIndex = 1;
             this.lbErrorMoney.Text = "Số dư tài khoản không đủ cho giao dịch";
+            this.lbErrorMoney.Click += new System.EventHandler(this.lbErrorMoney_Click);
             // 
             // lbErrorWidth
             // 
             this.lbErrorWidth.AutoSize = true;
             this.lbErrorWidth.BackColor = System.Drawing.Color.Transparent;
             this.lbErrorWidth.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbErrorWidth.Location = new System.Drawing.Point(121, 153);
+            this.lbErrorWidth.Location = new System.Drawing.Point(121, 101);
             this.lbErrorWidth.Name = "lbErrorWidth";
             this.lbErrorWidth.Size = new System.Drawing.Size(374, 20);
             this.lbErrorWidth.TabIndex = 2;
             this.lbErrorWidth.Text = "Giao dịch không thành công, số tiền không hợp lệ !!!";
+            // 
+            // lbLimit
+            // 
+            this.lbLimit.AutoSize = true;
+            this.lbLimit.BackColor = System.Drawing.Color.Transparent;
+            this.lbLimit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbLimit.Location = new System.Drawing.Point(153, 101);
+            this.lbLimit.Name = "lbLimit";
+            this.lbLimit.Size = new System.Drawing.Size(266, 20);
+            this.lbLimit.TabIndex = 3;
+            this.lbLimit.Text = "Bạn đã rút quá hạn mức trong ngày!!";
             // 
             // Fail
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::ATM.Properties.Resources.Background;
+            this.Controls.Add(this.lbLimit);
             this.Controls.Add(this.lbErrorWidth);
             this.Controls.Add(this.lbErrorMoney);
             this.Controls.Add(this.label1);
@@ -120,5 +134,6 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label lbErrorMoney;
         private System.Windows.Forms.Label lbErrorWidth;
+        private System.Windows.Forms.Label lbLimit;
     }
 }

@@ -8,11 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace ATM.UC.UC2
 {
     public partial class Fail : UserControl
     {
         private static Fail _instance;
+ 
         public static Fail Instance
         {
             get
@@ -34,12 +36,22 @@ namespace ATM.UC.UC2
         {
             lbErrorWidth.Visible = false;
             lbErrorMoney.Visible = true;
+            lbLimit.Visible = false;
+
         }
         public void showErrorWidth()
         {
             lbErrorMoney.Visible = false;
             lbErrorWidth.Visible = true;
+            lbLimit.Visible = false;
         }
+        public void showErrorLimit()
+        {
+            lbErrorMoney.Visible = false;
+            lbErrorWidth.Visible = false;
+            lbLimit.Visible = true;
+        }
+
 
         private void label1_Click(object sender, EventArgs e)
         {
@@ -47,6 +59,11 @@ namespace ATM.UC.UC2
         }
 
         private void Fail_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lbErrorMoney_Click(object sender, EventArgs e)
         {
 
         }

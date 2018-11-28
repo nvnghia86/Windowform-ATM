@@ -116,7 +116,7 @@ namespace DAL
             try
             {
                 int balance = -1;
-                string query = "select Account.Balance from Account inner join Card on Account.AccountID = Card.AccountID where CardNo = @cardNo";
+                string query = "select sum(ac.Balance+ov.Value) as Balance from Account as ac left join OverDraft ov on ac.ODID = ov.ODID left join Card as c on c.AccountID = ac.AccountID where CardNo = @cardNo group by ac.AccountID, c.AccountID, ov.ODID";
                 ConnectDatabase.open();
                 SqlCommand cmd = new SqlCommand(query, ConnectDatabase.connect);
                 cmd.Parameters.AddWithValue("cardNo", cardNo);
@@ -182,7 +182,42 @@ namespace DAL
                 return false;
             }
         }
-
+        public bool KiemTra(string cardNo)
+        {
+            try
+            {
+                string Date = DateTime.Now.ToString("yyyy-MM-dd");
+                string query = "select sum(Amount) As TongTien from Log where LogDate like "+Date+" and CardNo=@cardNo";
+                ConnectDatabase.open();
+                SqlCommand cmd = new SqlCommand(query, ConnectDatabase.connect);
+                cmd.Parameters.AddWithValue("cardNo", cardNo);
+                SqlDataReader dr = cmd.ExecuteReader();
+                int money = Convert.ToInt32(dr);
+                ConnectDatabase.close();
+                string sql = "select Value from Account as ac left join WithdrawLimit wd on ac.WDID = wd.WDID left join Card as c on c.AccountID = ac.AccountID where CardNo = @cardNo group by ac.AccountID, c.AccountID, wd.Value";
+                ConnectDatabase.open();
+                SqlCommand cmd1 = new SqlCommand(sql, ConnectDatabase.connect);
+                SqlDataReader dr1 = cmd1.ExecuteReader();
+                int hanmuc = Convert.ToInt32(dr1);
+                ConnectDatabase.close();
+                if (money <= hanmuc)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }     
+            }
+            catch
+            {
+                if (ConnectDatabase.CHECK_OPEN)
+                {
+                    ConnectDatabase.close();
+                }
+                return false;
+            }
+        }
 
     }
 }

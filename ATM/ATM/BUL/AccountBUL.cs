@@ -61,5 +61,9 @@ namespace BUL
         public bool updateBalance(int money, string cardNo) {
             return accountDAL.updateBalance(money, cardNo);
         }
+        public bool checkMoney( string cardNo)
+        {
+            return accountDAL.KiemTra(cardNo);
+        }
     }
 }
