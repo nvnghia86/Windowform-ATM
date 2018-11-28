@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ATM.UC;
@@ -16,10 +17,12 @@ using BUL;
 using DAL;
 
 
+
 namespace ATM
 {
     public partial class formMain : Form
     {
+        
         public static string state;
         private CardBUL carcBUL = new CardBUL();
         private CustomerBUL custBUL = new CustomerBUL();
@@ -28,7 +31,7 @@ namespace ATM
         private AccountBUL accountBUL = new AccountBUL();
         private StockBUL stockBUL = new StockBUL();
         private LogDAL logDAL = new LogDAL();
-
+        
         private int numberRecord;
         public formMain()
         {
@@ -363,7 +366,7 @@ namespace ATM
             }
             else if (state.Equals("success2"))
             {
-                exitValidatecard();
+                openEnd();
             }
             else if (state.Equals("checkBalance"))
             {
@@ -623,8 +626,8 @@ namespace ATM
             }
             state = "hello";
             ValidateCard.Instance.getlbCheckMa().Visible = false;
-
         }
+        
         // function to check CardNo
         private void checkCardNo()
         {
@@ -1153,8 +1156,44 @@ namespace ATM
             }
             state = "success2";
         }
+        private void Endd()
+        {
+            
+            if (!panelMain.Controls.Contains(ValidateCard.Instance))
+            {
+                panelMain.Controls.Add(Hello.Instance);
+                Hello.Instance.Dock = DockStyle.Fill;
+                Hello.Instance.BringToFront();
+                
+            }
+            else
+            {
+                Hello.Instance.BringToFront();
+                
+            }           
+        }
 
-
+        System.Windows.Forms.Timer Countdown_Timer;
+        private void openEnd()
+        {
+            Countdown_Timer = new System.Windows.Forms.Timer();
+            Countdown_Timer.Interval = 10000;
+            if (!panelMain.Controls.Contains(End.Instance))
+            {
+                panelMain.Controls.Add(End.Instance);
+                End.Instance.Dock = DockStyle.Fill;
+                End.Instance.BringToFront();
+            }
+            else
+            {
+                End.Instance.BringToFront();   
+            }
+            Countdown_Timer.Start();
+            Endd();
+            state = "end";
+            
+            
+        }
         // back to state list service from state widthdraw
         private void exitWidthdraw()
         {
@@ -1190,7 +1229,7 @@ namespace ATM
                 }
                 state = "success";
                 openReceiveBill();
-                createLog("logtype01", Convert.ToInt32(CustomWidthdraw.Instance.getTextBoxCustom()), "", lbCardNo.Text, "atm01", "Thành công");
+                createLog("logtype01", Convert.ToInt32(CustomWidthdraw.Instance.getTextBoxCustom()), "", lbCardNo.Text, "atm01", "Rút tiền thành công");
                 accountBUL.updateBalance(Convert.ToInt32(CustomWidthdraw.Instance.getTextBoxCustom()), lbCardNo.Text);
             }
             else
@@ -1205,6 +1244,7 @@ namespace ATM
                 {
                     Fail.Instance.BringToFront();
                 }
+                Fail.Instance.showErrorWidth();
                 state = "fail";
             }
         }
@@ -1228,7 +1268,7 @@ namespace ATM
                 }
                 state = "success";
                 openReceiveBill();
-                createLog("logtype01", 500000, "", lbCardNo.Text, "atm01", "Thành công");
+                createLog("logtype01", 500000, "", lbCardNo.Text, "atm01", "Rút tiền thành công");
                 accountBUL.updateBalance(500000, lbCardNo.Text);
             }
             else
@@ -1243,7 +1283,7 @@ namespace ATM
                 {
                     Fail.Instance.BringToFront();
                 }
-                openFail();
+                Fail.Instance.showErrorMoney();
                 state = "fail";
             }
         }
@@ -1284,7 +1324,7 @@ namespace ATM
                 }
                 state = "success";
                 openReceiveBill();
-                createLog("logtype01", 1000000, "", lbCardNo.Text, "atm01", "Thành công");
+                createLog("logtype01", 1000000, "", lbCardNo.Text, "atm01", "Rút tiền thành công");
                 accountBUL.updateBalance(1000000, lbCardNo.Text);
             }
             else
@@ -1300,7 +1340,7 @@ namespace ATM
                     Fail.Instance.BringToFront();
 
                 }
-                openFail();
+                Fail.Instance.showErrorMoney();
                 state = "fail";
             }
         }
@@ -1324,7 +1364,7 @@ namespace ATM
                 }
                 state = "success";
                 openReceiveBill();
-                createLog("logtype01", 2000000, "", lbCardNo.Text, "atm01", "Thành công");
+                createLog("logtype01", 2000000, "", lbCardNo.Text, "atm01", "Rút tiền thành công");
                 accountBUL.updateBalance(2000000, lbCardNo.Text);
             }
             else
@@ -1339,7 +1379,7 @@ namespace ATM
                 {
                     Fail.Instance.BringToFront();
                 }
-                openFail();
+                Fail.Instance.showErrorMoney();
                 state = "fail";
             }
         }
@@ -1363,7 +1403,7 @@ namespace ATM
                 }
                 state = "success";
                 openReceiveBill();
-                createLog("logtype01", 5000000, "", lbCardNo.Text, "atm01", "Thành công");
+                createLog("logtype01", 5000000, "", lbCardNo.Text, "atm01", "Rút tiền thành công");
                 accountBUL.updateBalance(5000000, lbCardNo.Text);
             }
             else
@@ -1378,7 +1418,7 @@ namespace ATM
                 {
                     Fail.Instance.BringToFront();
                 }
-                openFail();
+                Fail.Instance.showErrorMoney();
                 state = "fail";
             }
         }
@@ -1398,6 +1438,7 @@ namespace ATM
             state = "customWidthdraw";
             CustomWidthdraw.Instance.clearTextBoxCustom();
         }
+        
         private void openFail()
         {
             if (!panelMain.Controls.Contains(Fail.Instance))
@@ -1428,7 +1469,7 @@ namespace ATM
             
             
             CheckBalance.Instance.setLbBalance(accountBUL.getBalance(lbCardNo.Text));
-            createLog("logtype03", accountBUL.getBalanceInt(lbCardNo.Text), "", lbCardNo.Text, "atm01", "Check Balance");
+            createLog("logtype03", accountBUL.getBalanceInt(lbCardNo.Text), "", lbCardNo.Text, "atm01", "Kiểm tra số dư");
         }
     }
 }

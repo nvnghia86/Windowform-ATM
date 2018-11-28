@@ -32,11 +32,23 @@ namespace ATM.UC.UC2
 
         public void showErrorMoney()
         {
+            lbErrorWidth.Visible = false;
             lbErrorMoney.Visible = true;
+        }
+        public void showErrorWidth()
+        {
             lbErrorMoney.Visible = false;
-            label1.Visible = true;
-            label1.Visible = false;
+            lbErrorWidth.Visible = true;
         }
 
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Fail_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
