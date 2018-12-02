@@ -9,7 +9,7 @@ namespace DTO
     public class LogDTO
     {
         public string logID{get;set;}
-        public string logDate{get;set;}
+        public DateTime logDate{get;set;}
         public int amount{get;set;}
         public string details{get;set;}
         public string cardNoTo{get;set;}
@@ -19,7 +19,7 @@ namespace DTO
 
         public LogDTO() { }
 
-        public LogDTO(string logid, string logdate, int amou, string detai, string cardTo, string logtype, string atmid, string cardNo) {
+        public LogDTO(string logid, DateTime logdate, int amou, string detai, string cardTo, string logtype, string atmid, string cardNo) {
             this.logID = logid;
             this.logDate = logdate;
             this.amount = amou;

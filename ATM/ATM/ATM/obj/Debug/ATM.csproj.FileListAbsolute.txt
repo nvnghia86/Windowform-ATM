@@ -9,7 +9,6 @@ E:\Windowform-ATM\ATM\ATM\ATM\bin\Debug\DAL.pdb
 E:\Windowform-ATM\ATM\ATM\ATM\bin\Debug\DTO.pdb
 E:\Windowform-ATM\ATM\ATM\ATM\obj\Debug\ATM.csprojAssemblyReference.cache
 E:\Windowform-ATM\ATM\ATM\ATM\obj\Debug\ATM.formMain.resources
-E:\Windowform-ATM\ATM\ATM\ATM\obj\Debug\ATM.HoaDon.resources
 E:\Windowform-ATM\ATM\ATM\ATM\obj\Debug\ATM.Properties.Resources.resources
 E:\Windowform-ATM\ATM\ATM\ATM\obj\Debug\ATM.UC.Finish.resources
 E:\Windowform-ATM\ATM\ATM\ATM\obj\Debug\ATM.UC.Hello.resources
@@ -105,6 +104,8 @@ E:\Windowform-ATM\ATM\ATM\bin\Debug\BUL.pdb
 E:\Windowform-ATM\ATM\ATM\bin\Debug\DAL.pdb
 E:\Windowform-ATM\ATM\ATM\bin\Debug\DTO.pdb
 E:\Windowform-ATM\ATM\ATM\obj\Debug\ATM.csproj.CopyComplete
-E:\Windowform-ATM\ATM\ATM\ATM\obj\Debug\ATM.UC.UC2.Form1.resources
 E:\Windowform-ATM\ATM\ATM\ATM\obj\Debug\ATM.UC.UC2.CheckBalance.resources
 E:\Windowform-ATM\ATM\ATM\ATM\obj\Debug\ATM.UC.UC2.End.resources
+E:\Windowform-ATM\ATM\ATM\ATM\bin\Debug\FSharp.Core.dll
+E:\Windowform-ATM\ATM\ATM\ATM\bin\Debug\itextsharp.dll
+E:\Windowform-ATM\ATM\ATM\ATM\obj\Debug\ATM.UC.UC2.HoaDon.resources

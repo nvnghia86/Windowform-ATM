@@ -22,7 +22,7 @@ namespace ATM
 {
     public partial class formMain : Form
     {
-        
+
         public static string state;
         private CardBUL carcBUL = new CardBUL();
         private CustomerBUL custBUL = new CustomerBUL();
@@ -31,7 +31,7 @@ namespace ATM
         private AccountBUL accountBUL = new AccountBUL();
         private StockBUL stockBUL = new StockBUL();
         private LogDAL logDAL = new LogDAL();
-        
+
         private int numberRecord;
         public formMain()
         {
@@ -241,9 +241,10 @@ namespace ATM
                 exitChangePIN();
             }
         }
-
+        
         private void btnRight3_Click(object sender, EventArgs e)
         {
+            
             // state validate card
             if (state.Equals("validateCard"))
             {
@@ -300,6 +301,8 @@ namespace ATM
             }
             else if (state.Equals("receivebill"))
             {
+                HoaDon hoaDon = new HoaDon("account01", lbCardNo.Text);
+                hoaDon.Visible = true;
                 openSuccess();
             }
             else if (state.Equals("success2"))
@@ -627,7 +630,7 @@ namespace ATM
             state = "hello";
             ValidateCard.Instance.getlbCheckMa().Visible = false;
         }
-        
+
         // function to check CardNo
         private void checkCardNo()
         {
@@ -1158,19 +1161,19 @@ namespace ATM
         }
         private void Endd()
         {
-            
+
             if (!panelMain.Controls.Contains(ValidateCard.Instance))
             {
                 panelMain.Controls.Add(Hello.Instance);
                 Hello.Instance.Dock = DockStyle.Fill;
                 Hello.Instance.BringToFront();
-                
+
             }
             else
             {
                 Hello.Instance.BringToFront();
-                
-            }           
+
+            }
         }
 
         System.Windows.Forms.Timer Countdown_Timer;
@@ -1186,13 +1189,13 @@ namespace ATM
             }
             else
             {
-                End.Instance.BringToFront();   
+                End.Instance.BringToFront();
             }
             Countdown_Timer.Start();
             Endd();
             state = "end";
-            
-            
+
+
         }
         // back to state list service from state widthdraw
         private void exitWidthdraw()
@@ -1213,10 +1216,9 @@ namespace ATM
         // press ENTER in state custom widthdraw
         private void pressEnterCustomWidthdraw()
         {
-            bool kiemtra = accountBUL.checkMoney(lbCardNo.Text);
             bool check = stockBUL.updateQuantity(Convert.ToInt32(CustomWidthdraw.Instance.getTextBoxCustom()));
-            bool checkMoney = accountBUL.compareBalance(Convert.ToInt32(CustomWidthdraw.Instance.getTextBoxCustom())+50000, lbCardNo.Text);
-            if (!check)
+            bool checkMoney = accountBUL.compareBalance(Convert.ToInt32(CustomWidthdraw.Instance.getTextBoxCustom()) + 50000, lbCardNo.Text);
+            if (!checkMoney)
             {
                 if (!panelMain.Controls.Contains(Fail.Instance))
                 {
@@ -1228,29 +1230,12 @@ namespace ATM
                 {
                     Fail.Instance.BringToFront();
                 }
-                Fail.Instance.showErrorWidth();
+                Fail.Instance.showErrorMoney();
                 state = "fail";
             }
             else
             {
-                if(!kiemtra)
-                {
-                    if (!panelMain.Controls.Contains(Fail.Instance))
-                    {
-                        panelMain.Controls.Add(Fail.Instance);
-                        Fail.Instance.Dock = DockStyle.Fill;
-                        Fail.Instance.BringToFront();
-                    }
-                    else
-                    {
-                        Fail.Instance.BringToFront();
-                    }
-                    Fail.Instance.showErrorLimit();
-                    state = "fail";
-                }
-                else
-                {
-                    if (checkMoney)
+                if (check)
                 {
                     if (!panelMain.Controls.Contains(Success.Instance))
                     {
@@ -1282,17 +1267,15 @@ namespace ATM
                     Fail.Instance.showErrorMoney();
                     state = "fail";
                 }
-                }
-                
             }
         }
+
         // select widthdraw 500.000
         private void widthdrawSelectOne()
         {
             bool check = stockBUL.updateQuantity(500000);
-            bool kiemtra = accountBUL.checkMoney(lbCardNo.Text);
             bool checkMoney = accountBUL.compareBalance(550000, lbCardNo.Text);
-            if (!kiemtra)
+            if (!checkMoney)
             {
                 if (!panelMain.Controls.Contains(Fail.Instance))
                 {
@@ -1304,12 +1287,12 @@ namespace ATM
                 {
                     Fail.Instance.BringToFront();
                 }
-                Fail.Instance.showErrorLimit();
+                Fail.Instance.showErrorMoney();
                 state = "fail";
             }
             else
             {
-                if (check && checkMoney)
+                if (check)
                 {
                     if (!panelMain.Controls.Contains(Success.Instance))
                     {
@@ -1342,8 +1325,9 @@ namespace ATM
                     state = "fail";
                 }
             }
-            
         }
+
+
 
         // switch from control list service to control widthdraw
         private void openStateWidthdraw()
@@ -1364,10 +1348,9 @@ namespace ATM
         // select widthdraw 1.000.000
         private void widthdrawSelectTwo()
         {
-            bool kiemtra = accountBUL.checkMoney(lbCardNo.Text);
             bool check = stockBUL.updateQuantity(1000000);
             bool checkMoney = accountBUL.compareBalance(1050000, lbCardNo.Text);
-            if (!kiemtra)
+            if (!checkMoney)
             {
                 if (!panelMain.Controls.Contains(Fail.Instance))
                 {
@@ -1378,14 +1361,14 @@ namespace ATM
                 else
                 {
                     Fail.Instance.BringToFront();
-
                 }
-                Fail.Instance.showErrorLimit();
+                Fail.Instance.showErrorMoney();
                 state = "fail";
             }
             else
             {
-                if (check && checkMoney)
+
+                if (check)
                 {
                     if (!panelMain.Controls.Contains(Success.Instance))
                     {
@@ -1413,22 +1396,21 @@ namespace ATM
                     else
                     {
                         Fail.Instance.BringToFront();
-
                     }
                     Fail.Instance.showErrorMoney();
                     state = "fail";
                 }
             }
-            
+
         }
 
         // select widthdraw 2.000.000
         private void widthdrawSelectThree()
         {
-            bool kiemtra = accountBUL.checkMoney(lbCardNo.Text);
+            bool kiemtra = logBUL.soSanh(2000000, lbCardNo.Text);
             bool check = stockBUL.updateQuantity(2000000);
             bool checkMoney = accountBUL.compareBalance(2050000, lbCardNo.Text);
-            if(!kiemtra)
+            if (!kiemtra)
             {
                 if (!panelMain.Controls.Contains(Fail.Instance))
                 {
@@ -1445,7 +1427,7 @@ namespace ATM
             }
             else
             {
-                if (check && checkMoney)
+                if(checkMoney && check)
                 {
                     if (!panelMain.Controls.Contains(Success.Instance))
                     {
@@ -1478,17 +1460,17 @@ namespace ATM
                     state = "fail";
                 }
             }
-            
+
+
         }
-        
+
         // select widthdraw 5.000.000
         private void widthdrawSelectFour()
         {
-            
-            bool kiemtra = accountBUL.checkMoney(lbCardNo.Text);
             bool check = stockBUL.updateQuantity(5000000);
             bool checkMoney = accountBUL.compareBalance(5050000, lbCardNo.Text);
-            if(!kiemtra)
+
+            if (!checkMoney)
             {
                 if (!panelMain.Controls.Contains(Fail.Instance))
                 {
@@ -1500,12 +1482,13 @@ namespace ATM
                 {
                     Fail.Instance.BringToFront();
                 }
-                Fail.Instance.showErrorLimit();
+                Fail.Instance.showErrorMoney();
                 state = "fail";
             }
             else
             {
-                if (check && checkMoney && kiemtra)
+
+                if (check)
                 {
                     if (!panelMain.Controls.Contains(Success.Instance))
                     {
@@ -1538,7 +1521,9 @@ namespace ATM
                     state = "fail";
                 }
             }
-            
+
+
+
         }
         // switch from control widthdraw to control custom widthdraw
         private void openStateCustomWidthdraw()
@@ -1556,7 +1541,7 @@ namespace ATM
             state = "customWidthdraw";
             CustomWidthdraw.Instance.clearTextBoxCustom();
         }
-        
+
         private void openFail()
         {
             if (!panelMain.Controls.Contains(Fail.Instance))
@@ -1584,8 +1569,7 @@ namespace ATM
                 CheckBalance.Instance.BringToFront();
             }
             state = "checkBalance";
-            
-            
+
             CheckBalance.Instance.setLbBalance(accountBUL.getBalance(lbCardNo.Text));
             createLog("logtype03", accountBUL.getBalanceInt(lbCardNo.Text), "", lbCardNo.Text, "atm01", "Kiểm tra số dư");
         }

@@ -4,12 +4,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using DTO;
 
 namespace BUL
 {
     public class AccountBUL
     {
         private AccountDAL accountDAL = new AccountDAL();
+        private LogDAL logDAL = new LogDAL();
         public string getBalance(string cardNo) {
             int balance = accountDAL.getBalance(cardNo);
             string str = balance + "";
@@ -56,14 +58,16 @@ namespace BUL
         public bool compareBalance(int money, string cardNo) {
             return accountDAL.compareBalance(money, cardNo);
         }
-
         // widthdraw
         public bool updateBalance(int money, string cardNo) {
             return accountDAL.updateBalance(money, cardNo);
         }
-        public bool checkMoney( string cardNo)
+      
+        public List<AccountDTO> DocBangAccountID(string accID)
         {
-            return accountDAL.KiemTra(cardNo);
+            return accountDAL.DocBangAccountID(accID);
         }
+
+
     }
 }

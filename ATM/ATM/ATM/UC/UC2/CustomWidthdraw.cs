@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BUL;
 
 namespace ATM.UC.UC2
 {
@@ -29,9 +30,9 @@ namespace ATM.UC.UC2
         {
             InitializeComponent();
         }
-
+        
         public string getTextBoxCustom()
-        {
+        {        
             return tbCustomWidthdraw.Text;
         }
 

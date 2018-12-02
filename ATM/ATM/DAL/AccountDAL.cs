@@ -4,12 +4,16 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using DTO;
+using System.Configuration;
 
 namespace DAL
 {
     public class AccountDAL
     {
-        public int getBalance(string cardNo) {
+        SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["DBConnString"].ToString());
+
+               public int getBalance(string cardNo) {
             try {
                 int balance = -1;
                 string query = "select Account.Balance from Account inner join Card on Account.AccountID = Card.AccountID where CardNo = @cardNo";
@@ -33,6 +37,7 @@ namespace DAL
                 return -1;
             }
         }
+        
 
         public bool updateBalance(int money, string cardNo, string cardNoTo) {
             try {
@@ -182,41 +187,28 @@ namespace DAL
                 return false;
             }
         }
-        public bool KiemTra(string cardNo)
+        public List<AccountDTO> DocBangAccountID(string accID)
         {
-            try
+            con.Open();
+            List<AccountDTO> dsAcc = new List<AccountDTO>();
+            string sql = " select * from Account where AccountID = @accID ";
+            SqlCommand cmd = new SqlCommand(sql, con);
+            cmd.Parameters.AddWithValue("accID", accID);
+            SqlDataReader dr = cmd.ExecuteReader();
+            while (dr.Read())
             {
-                string Date = DateTime.Now.ToString("yyyy-MM-dd");
-                string query = "select sum(Amount) As TongTien from Log where LogDate like "+Date+" and CardNo=@cardNo";
-                ConnectDatabase.open();
-                SqlCommand cmd = new SqlCommand(query, ConnectDatabase.connect);
-                cmd.Parameters.AddWithValue("cardNo", cardNo);
-                SqlDataReader dr = cmd.ExecuteReader();
-                int money = Convert.ToInt32(dr);
-                ConnectDatabase.close();
-                string sql = "select Value from Account as ac left join WithdrawLimit wd on ac.WDID = wd.WDID left join Card as c on c.AccountID = ac.AccountID where CardNo = @cardNo group by ac.AccountID, c.AccountID, wd.Value";
-                ConnectDatabase.open();
-                SqlCommand cmd1 = new SqlCommand(sql, ConnectDatabase.connect);
-                SqlDataReader dr1 = cmd1.ExecuteReader();
-                int hanmuc = Convert.ToInt32(dr1);
-                ConnectDatabase.close();
-                if (money <= hanmuc)
-                {
-                    return true;
-                }
-                else
-                {
-                    return false;
-                }     
+                AccountDTO aAcc = new AccountDTO(
+                    dr["AccountID"].ToString(),
+                    int.Parse(dr["Balance"].ToString()),
+                    dr["AccountNo"].ToString(),
+                    dr["ODID"].ToString(),
+                    dr["WDID"].ToString(),
+                    dr["CustID"].ToString()
+                    );
+                dsAcc.Add(aAcc);
             }
-            catch
-            {
-                if (ConnectDatabase.CHECK_OPEN)
-                {
-                    ConnectDatabase.close();
-                }
-                return false;
-            }
+            con.Close();
+            return dsAcc;
         }
 
     }

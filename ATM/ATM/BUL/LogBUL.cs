@@ -41,7 +41,21 @@ namespace BUL
 
             return arrLogNew;
         }
-
+        public bool soSanh(int money, string cardNo)
+        {
+            if (logDAL.tongTien(money, cardNo) <= logDAL.hanMuc(money, cardNo))
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+        public List<LogDTO> LayHoaDon(string cardNo)
+        {
+            return logDAL.LayHoaDon(cardNo);
+        }
 
     }
 }

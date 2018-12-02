@@ -33,6 +33,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="FSharp.Core, Version=4.5.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="itextsharp">
+      <HintPath>..\..\..\..\WF\iTextSharp_5.4.4\itextsharp.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
@@ -52,12 +56,6 @@
     </Compile>
     <Compile Include="FormMain.Designer.cs">
       <DependentUpon>FormMain.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UC\UC2\Bill.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UC\UC2\Bill.Designer.cs">
-      <DependentUpon>Bill.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -103,11 +101,11 @@
     <Compile Include="UC\UC2\End.Designer.cs">
       <DependentUpon>End.cs</DependentUpon>
     </Compile>
-    <Compile Include="UC\UC2\Form1.cs">
+    <Compile Include="UC\UC2\HoaDon.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UC\UC2\Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="UC\UC2\HoaDon.Designer.cs">
+      <DependentUpon>HoaDon.cs</DependentUpon>
     </Compile>
     <Compile Include="UC\UC2\Success.cs">
       <SubType>UserControl</SubType>
@@ -184,9 +182,6 @@
     <EmbeddedResource Include="FormMain.resx">
       <DependentUpon>FormMain.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UC\UC2\Bill.resx">
-      <DependentUpon>Bill.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -218,8 +213,8 @@
     <EmbeddedResource Include="UC\UC2\End.resx">
       <DependentUpon>End.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UC\UC2\Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="UC\UC2\HoaDon.resx">
+      <DependentUpon>HoaDon.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UC\UC2\Success.resx">
       <DependentUpon>Success.cs</DependentUpon>
