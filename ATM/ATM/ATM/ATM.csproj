@@ -95,11 +95,11 @@
     <Compile Include="UC\UC2\CheckBalance.Designer.cs">
       <DependentUpon>CheckBalance.cs</DependentUpon>
     </Compile>
-    <Compile Include="UC\UC2\End.cs">
+    <Compile Include="UC\UC2\NhanTien.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UC\UC2\End.Designer.cs">
-      <DependentUpon>End.cs</DependentUpon>
+    <Compile Include="UC\UC2\NhanTien.Designer.cs">
+      <DependentUpon>NhanTien.cs</DependentUpon>
     </Compile>
     <Compile Include="UC\UC2\HoaDon.cs">
       <SubType>Form</SubType>
@@ -210,8 +210,8 @@
     <EmbeddedResource Include="UC\UC2\CheckBalance.resx">
       <DependentUpon>CheckBalance.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UC\UC2\End.resx">
-      <DependentUpon>End.cs</DependentUpon>
+    <EmbeddedResource Include="UC\UC2\NhanTien.resx">
+      <DependentUpon>NhanTien.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UC\UC2\HoaDon.resx">
       <DependentUpon>HoaDon.cs</DependentUpon>

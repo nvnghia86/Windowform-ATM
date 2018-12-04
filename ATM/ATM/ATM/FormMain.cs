@@ -313,19 +313,13 @@ namespace ATM
             {
                 exitChangePIN();
             }
-
-
         }
-
         private void btnRight4_Click(object sender, EventArgs e)
         {
-            // state validate card
             if (state.Equals("validateCard"))
             {
                 exitValidatecard();
-
             }
-            // state validate PIN
             else if (state.Equals("validatePin"))
             {
                 exitValidatePIN();
@@ -340,13 +334,10 @@ namespace ATM
             {
                 exit();
             }
-
-            // state cash transfer card
             else if (state.Equals("cashTransferCard"))
             {
                 exitCashTransferCard();
             }
-            // state cash transfer money
             else if (state.Equals("cashTransferMoney"))
             {
                 exitCashTransferMoney();
@@ -369,8 +360,10 @@ namespace ATM
             }
             else if (state.Equals("success2"))
             {
-                openEnd();
+                openNhanTien();
+                timerLoading.Start();
             }
+            
             else if (state.Equals("checkBalance"))
             {
                 exitValidatecard();
@@ -1159,11 +1152,9 @@ namespace ATM
             }
             state = "success2";
         }
-        private void Endd()
+        private void End()
         {
-            Countdown_Timer = new System.Windows.Forms.Timer();
-            Countdown_Timer.Interval = 1;
-            if (!panelMain.Controls.Contains(ValidateCard.Instance))
+            if (!panelMain.Controls.Contains(Hello.Instance))
             {
                 panelMain.Controls.Add(Hello.Instance);
                 Hello.Instance.Dock = DockStyle.Fill;
@@ -1174,28 +1165,23 @@ namespace ATM
             {
                 Hello.Instance.BringToFront();
             }
-            Countdown_Timer.Start();
-            Endd();
         }
-
-        System.Windows.Forms.Timer Countdown_Timer;
-        private void openEnd()
+        private void openNhanTien()
         {
-            
-            if (!panelMain.Controls.Contains(End.Instance))
+            if (!panelMain.Controls.Contains(NhanTien.Instance))
             {
-                panelMain.Controls.Add(End.Instance);
-                End.Instance.Dock = DockStyle.Fill;
-                End.Instance.BringToFront();
+                panelMain.Controls.Add(NhanTien.Instance);
+                NhanTien.Instance.Dock = DockStyle.Fill;
+                NhanTien.Instance.BringToFront();
             }
             else
             {
-                End.Instance.BringToFront();
+                NhanTien.Instance.BringToFront();
             }
+            timerLoading.Start();
+            state = "nhanTien";
             
-            state = "end";
         }
-        // back to state list service from state widthdraw
         private void exitWidthdraw()
         {
             if (!panelMain.Controls.Contains(ListMenu.Instance))
@@ -1211,7 +1197,7 @@ namespace ATM
             state = "listMenu";
         }
 
-        // press ENTER in state custom widthdraw
+        // Nhập số tiền rút
         private void pressEnterCustomWidthdraw()
         {
             bool check = stockBUL.updateQuantity(Convert.ToInt32(CustomWidthdraw.Instance.getTextBoxCustom()));
@@ -1565,14 +1551,26 @@ namespace ATM
                 CheckBalance.Instance.BringToFront();
             }
             state = "checkBalance";
-
             CheckBalance.Instance.setLbBalance(accountBUL.getBalance(lbCardNo.Text));
             createLog("logtype03", accountBUL.getBalanceInt(lbCardNo.Text), "", lbCardNo.Text, "atm01", "Kiểm tra số dư");
         }
-
+        private void openMain()
+        {
+            if (!panelMain.Controls.Contains(Hello.Instance))
+            {
+                panelMain.Controls.Add(Hello.Instance);
+                Hello.Instance.Dock = DockStyle.Fill;
+                Hello.Instance.BringToFront();
+            }
+            else
+            {
+                Hello.Instance.BringToFront();
+            }
+        }
         private void timerLoading_Tick(object sender, EventArgs e)
         {
-        s
+            openMain();
+            timerLoading.Stop();
         }
     }
 }

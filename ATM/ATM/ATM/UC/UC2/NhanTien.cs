@@ -10,21 +10,21 @@ using System.Windows.Forms;
 
 namespace ATM.UC.UC2
 {
-    public partial class End : UserControl
+    public partial class NhanTien : UserControl
     {
-        private static End _instance;
-        public static End Instance
+        private static NhanTien _instance;
+        public static NhanTien Instance
         {
             get
             {
                 if (_instance == null)
                 {
-                    _instance = new End();
+                    _instance = new NhanTien();
                 }
                 return _instance;
             }
         }
-        public End()
+        public NhanTien()
         {
             InitializeComponent();
         }

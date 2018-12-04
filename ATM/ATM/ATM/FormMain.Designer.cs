@@ -404,7 +404,7 @@
             // 
             // timerLoading
             // 
-            this.timerLoading.Interval = 1000;
+            this.timerLoading.Interval = 3000;
             this.timerLoading.Tick += new System.EventHandler(this.timerLoading_Tick);
             // 
             // formMain

@@ -1,6 +1,6 @@
 ﻿namespace ATM.UC.UC2
 {
-    partial class End
+    partial class NhanTien
     {
         /// <summary> 
         /// Required designer variable.
