@@ -72,58 +72,42 @@ namespace DAL
             }
             
         }
-        
+
         public int tongTien(int money, string cardNo)
         {
-            try
-            { 
-            int tien = -1;
-            string Date = DateTime.Now.ToString("yyyy/MM/dd");
-            string query = "select sum(Amount) As Amount from Log where LogDate like " + Date + " and CardNo = @cardNo and LogTypeID = 'logtype01'";
-            ConnectDatabase.open();
-            SqlCommand cmd = new SqlCommand(query, ConnectDatabase.connect);
-            cmd.Parameters.AddWithValue("cardNo", cardNo);
+             int tien = 0;
+             string ngay = DateTime.Now.ToString("yyyy-MM-dd");
+             string sql = "select sum(Amount) as Amount from Log where LogTypeID " +
+                "= 'logtype01' and LogDate = '"+ngay+"' and CardNo = @cardNo ";
+             con.Open();
+             SqlCommand cmd = new SqlCommand(sql, con);
+             cmd.Parameters.AddWithValue("cardNo", cardNo);
+            
             SqlDataReader dr = cmd.ExecuteReader();
-            while (dr.Read())
-            {
-                tien = Convert.ToInt32(dr["Amount"]);
-            }
-            ConnectDatabase.close();
-            return tien;
-            }
-            catch
-            {
-                if (ConnectDatabase.CHECK_OPEN)
+                while (dr.Read())
                 {
-                    ConnectDatabase.close();
+                    if (dr["Amount"].ToString() != "")
+                    tien += int.Parse(dr["Amount"].ToString());
                 }
-                return -1;
-            }
+            con.Close();
+            return tien;  
         }
+            
         public int hanMuc(int money,string cardNo)
         {
-            try
-            { 
-                int hanmuc = -1;
+                int hanmuc = 0;
                 string sql = "select Value from Account as ac left join WithdrawLimit wd on ac.WDID = wd.WDID left join Card as c on c.AccountID = ac.AccountID where CardNo = @cardNo group by ac.AccountID, c.AccountID, wd.Value";
-                ConnectDatabase.open();
-                SqlCommand cmd = new SqlCommand(sql, ConnectDatabase.connect);
+                con.Open();
+                SqlCommand cmd = new SqlCommand(sql, con);
                 cmd.Parameters.AddWithValue("cardNo", cardNo);
                 SqlDataReader dr = cmd.ExecuteReader();
                 while (dr.Read())
                 {
                     hanmuc = money - money + Convert.ToInt32(dr["Value"]);
                 }
+            con.Close();
             return hanmuc;
-            }
-            catch
-            {
-                if (ConnectDatabase.CHECK_OPEN)
-                {
-                    ConnectDatabase.close();
-                }
-                return -1;
-            }
+            
         }
         public List<LogDTO> LayHoaDon(string cardNo)
         {

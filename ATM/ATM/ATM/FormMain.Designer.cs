@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(formMain));
             this.panelMain = new System.Windows.Forms.Panel();
             this.btnThe = new System.Windows.Forms.Button();
@@ -59,6 +60,7 @@
             this.btnLeft3 = new System.Windows.Forms.Button();
             this.btnLeft4 = new System.Windows.Forms.Button();
             this.btnEnter = new System.Windows.Forms.Button();
+            this.timerLoading = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
             // panelMain
@@ -400,6 +402,11 @@
             this.btnEnter.UseVisualStyleBackColor = true;
             this.btnEnter.Click += new System.EventHandler(this.btnEnter_Click);
             // 
+            // timerLoading
+            // 
+            this.timerLoading.Interval = 1000;
+            this.timerLoading.Tick += new System.EventHandler(this.timerLoading_Tick);
+            // 
             // formMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -474,6 +481,7 @@
         private System.Windows.Forms.Button btn3;
         private System.Windows.Forms.Button btn2;
         private System.Windows.Forms.Button btn1;
+        private System.Windows.Forms.Timer timerLoading;
     }
 }
 
