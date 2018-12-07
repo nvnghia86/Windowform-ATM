@@ -301,10 +301,9 @@ namespace ATM
             }
             else if (state.Equals("receivebill"))
             {
-                timer1.Start();
                 HoaDon hoaDon = new HoaDon("account01", lbCardNo.Text);
                 hoaDon.Visible = true;
-                openDangThucHien();
+                openSuccess();
             }
             else if (state.Equals("success2"))
             {
@@ -1224,24 +1223,7 @@ namespace ATM
             }
             else
             {
-                if (checkMoney && check)
-                {
-                    if (!panelMain.Controls.Contains(Success.Instance))
-                    {
-                        panelMain.Controls.Add(Success.Instance);
-                        Success.Instance.Dock = DockStyle.Fill;
-                        Success.Instance.BringToFront();
-                    }
-                    else
-                    {
-                        Success.Instance.BringToFront();
-                    }
-                    state = "success";
-                    openReceiveBill();
-                    createLog("logtype01", Convert.ToInt32(CustomWidthdraw.Instance.getTextBoxCustom()), "", lbCardNo.Text, "atm01", "Rút tiền thành công");
-                    accountBUL.updateBalance(Convert.ToInt32(CustomWidthdraw.Instance.getTextBoxCustom()), lbCardNo.Text);
-                }
-                else
+                if (!check)
                 {
                     if (!panelMain.Controls.Contains(Fail.Instance))
                     {
@@ -1253,8 +1235,43 @@ namespace ATM
                     {
                         Fail.Instance.BringToFront();
                     }
-                    Fail.Instance.showErrorMoney();
+                    Fail.Instance.showErrorWidth();
                     state = "fail";
+                }
+                else
+                {
+                    if (checkMoney)
+                    {
+                        if (!panelMain.Controls.Contains(Success.Instance))
+                        {
+                            panelMain.Controls.Add(Success.Instance);
+                            Success.Instance.Dock = DockStyle.Fill;
+                            Success.Instance.BringToFront();
+                        }
+                        else
+                        {
+                            Success.Instance.BringToFront();
+                        }
+                        state = "success";
+                        openReceiveBill();
+                        createLog("logtype01", Convert.ToInt32(CustomWidthdraw.Instance.getTextBoxCustom()), "", lbCardNo.Text, "atm01", "Rút tiền thành công");
+                        accountBUL.updateBalance(Convert.ToInt32(CustomWidthdraw.Instance.getTextBoxCustom()), lbCardNo.Text);
+                    }
+                    else
+                    {
+                        if (!panelMain.Controls.Contains(Fail.Instance))
+                        {
+                            panelMain.Controls.Add(Fail.Instance);
+                            Fail.Instance.Dock = DockStyle.Fill;
+                            Fail.Instance.BringToFront();
+                        }
+                        else
+                        {
+                            Fail.Instance.BringToFront();
+                        }
+                        Fail.Instance.showErrorMoney();
+                        state = "fail";
+                    }
                 }
             }
         }
@@ -1277,6 +1294,7 @@ namespace ATM
                 {
                     Fail.Instance.BringToFront();
                 }
+                
                 Fail.Instance.showErrorLimit();
                 state = "fail";
             }
@@ -1492,6 +1510,7 @@ namespace ATM
                     openReceiveBill();
                     createLog("logtype01", 5000000, "", lbCardNo.Text, "atm01", "Rút tiền thành công");
                     accountBUL.updateBalance(5000000, lbCardNo.Text);
+                    
                 }
                 else
                 {
@@ -1582,6 +1601,7 @@ namespace ATM
             {
                 DangThucHien.Instance.BringToFront();
             }
+            state = "dangthuchien";
         }
         private void timerLoading_Tick(object sender, EventArgs e)
         {
@@ -1591,8 +1611,8 @@ namespace ATM
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            openSuccess();
-            timerLoading.Stop();
+            openDangThucHien();
+            timer1.Stop();
         }
     }
 }
