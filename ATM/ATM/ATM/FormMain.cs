@@ -301,9 +301,10 @@ namespace ATM
             }
             else if (state.Equals("receivebill"))
             {
+                timer1.Start();
                 HoaDon hoaDon = new HoaDon("account01", lbCardNo.Text);
                 hoaDon.Visible = true;
-                openSuccess();
+                openDangThucHien();
             }
             else if (state.Equals("success2"))
             {
@@ -1137,9 +1138,11 @@ namespace ATM
                 ReceiveBill.Instance.BringToFront();
             }
             state = "receivebill";
+            
         }
         private void openSuccess()
         {
+            
             if (!panelMain.Controls.Contains(Success.Instance))
             {
                 panelMain.Controls.Add(Success.Instance);
@@ -1567,9 +1570,28 @@ namespace ATM
                 Hello.Instance.BringToFront();
             }
         }
+        private void openDangThucHien()
+        {
+            if (!panelMain.Controls.Contains(DangThucHien.Instance))
+            {
+                panelMain.Controls.Add(DangThucHien.Instance);
+                DangThucHien.Instance.Dock = DockStyle.Fill;
+                DangThucHien.Instance.BringToFront();
+            }
+            else
+            {
+                DangThucHien.Instance.BringToFront();
+            }
+        }
         private void timerLoading_Tick(object sender, EventArgs e)
         {
             openMain();
+            timerLoading.Stop();
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            openSuccess();
             timerLoading.Stop();
         }
     }

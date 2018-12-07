@@ -109,3 +109,4 @@ E:\Windowform-ATM\ATM\ATM\ATM\bin\Debug\FSharp.Core.dll
 E:\Windowform-ATM\ATM\ATM\ATM\bin\Debug\itextsharp.dll
 E:\Windowform-ATM\ATM\ATM\ATM\obj\Debug\ATM.UC.UC2.HoaDon.resources
 E:\Windowform-ATM\ATM\ATM\ATM\obj\Debug\ATM.UC.UC2.NhanTien.resources
+E:\Windowform-ATM\ATM\ATM\ATM\obj\Debug\ATM.UC.UC2.DangThucHien.resources

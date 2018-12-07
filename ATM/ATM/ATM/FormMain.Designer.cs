@@ -61,6 +61,7 @@
             this.btnLeft4 = new System.Windows.Forms.Button();
             this.btnEnter = new System.Windows.Forms.Button();
             this.timerLoading = new System.Windows.Forms.Timer(this.components);
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
             // panelMain
@@ -407,6 +408,11 @@
             this.timerLoading.Interval = 3000;
             this.timerLoading.Tick += new System.EventHandler(this.timerLoading_Tick);
             // 
+            // timer1
+            // 
+            this.timer1.Interval = 3000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // formMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -482,6 +488,7 @@
         private System.Windows.Forms.Button btn2;
         private System.Windows.Forms.Button btn1;
         private System.Windows.Forms.Timer timerLoading;
+        private System.Windows.Forms.Timer timer1;
     }
 }
 

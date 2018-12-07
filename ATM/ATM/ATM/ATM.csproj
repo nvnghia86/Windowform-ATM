@@ -95,6 +95,12 @@
     <Compile Include="UC\UC2\CheckBalance.Designer.cs">
       <DependentUpon>CheckBalance.cs</DependentUpon>
     </Compile>
+    <Compile Include="UC\UC2\DangThucHien.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC\UC2\DangThucHien.Designer.cs">
+      <DependentUpon>DangThucHien.cs</DependentUpon>
+    </Compile>
     <Compile Include="UC\UC2\NhanTien.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -209,6 +215,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UC\UC2\CheckBalance.resx">
       <DependentUpon>CheckBalance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC\UC2\DangThucHien.resx">
+      <DependentUpon>DangThucHien.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UC\UC2\NhanTien.resx">
       <DependentUpon>NhanTien.cs</DependentUpon>
