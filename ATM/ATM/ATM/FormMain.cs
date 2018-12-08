@@ -184,6 +184,7 @@ namespace ATM
 
         private void btnLeft1_Click(object sender, EventArgs e)
         {
+            // Nguyen Van Nghia
             if (state.Equals("widthdraw"))
             {
                 widthdrawSelectOne();
@@ -193,10 +194,12 @@ namespace ATM
 
         private void btnLeft2_Click(object sender, EventArgs e)
         {
+            // Nguyen Van Nghia
             if (state.Equals("widthdraw"))
             {
                 widthdrawSelectThree();
             }
+            // Nguyen Van Nghia
             if (state.Equals("menu"))
             {
                 openStateCheckBalance();
@@ -219,10 +222,12 @@ namespace ATM
 
         private void btnRight1_Click(object sender, EventArgs e)
         {
+            // Nguyen Van Nghia
             if (state.Equals("menu"))
             {
                 openStateWidthdraw();
             }
+            // Nguyen Van Nghia
             else if (state.Equals("widthdraw"))
             {
                 widthdrawSelectTwo();
@@ -232,6 +237,7 @@ namespace ATM
 
         private void btnRight2_Click(object sender, EventArgs e)
         {
+            // Nguyen Van Nghia
             if (state.Equals("widthdraw"))
             {
                 widthdrawSelectFour();
@@ -1092,10 +1098,7 @@ namespace ATM
                 }
             }
         }
-        //
 
-
-        // back to state validate card from state list service
         private void exitListMenu()
         {
             if (!panelMain.Controls.Contains(ValidateCard.Instance))
@@ -1198,8 +1201,6 @@ namespace ATM
             }
             state = "listMenu";
         }
-
-        // Nhập số tiền rút
         private void pressEnterCustomWidthdraw()
         {
             bool check = stockBUL.updateQuantity(Convert.ToInt32(CustomWidthdraw.Instance.getTextBoxCustom()));
@@ -1275,8 +1276,6 @@ namespace ATM
                 }
             }
         }
-
-        // select widthdraw 500.000
         private void widthdrawSelectOne()
         {
             bool kiemtra = logBUL.soSanh(500000, lbCardNo.Text);
@@ -1334,10 +1333,6 @@ namespace ATM
                 }
             }
         }
-
-
-
-        // switch from control list service to control widthdraw
         private void openStateWidthdraw()
         {
             if (!panelMain.Controls.Contains(Widthdraw.Instance))
@@ -1352,7 +1347,6 @@ namespace ATM
             }
             state = "widthdraw";
         }
-        private void openStateA() { }
         // select widthdraw 1.000.000
         private void widthdrawSelectTwo()
         {
@@ -1467,11 +1461,7 @@ namespace ATM
                     state = "fail";
                 }
             }
-
-
         }
-
-        // select widthdraw 5.000.000
         private void widthdrawSelectFour()
         {
             bool kiemtra = logBUL.soSanh(5000000, lbCardNo.Text);
@@ -1529,7 +1519,6 @@ namespace ATM
                 }
             }
         }
-        // switch from control widthdraw to control custom widthdraw
         private void openStateCustomWidthdraw()
         {
             if (!panelMain.Controls.Contains(CustomWidthdraw.Instance))
@@ -1545,7 +1534,6 @@ namespace ATM
             state = "customWidthdraw";
             CustomWidthdraw.Instance.clearTextBoxCustom();
         }
-
         private void openFail()
         {
             if (!panelMain.Controls.Contains(Fail.Instance))
